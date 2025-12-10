@@ -2,16 +2,30 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 
 let client: GoogleGenAI | null = null;
 
-const getClient = (): GoogleGenAI => {
+const getClient = (): GoogleGenAI | null => {
   if (!client) {
-    const apiKey = process.env.API_KEY;
+    // Safety check: In some static environments, 'process' might not be defined.
+    // We check availability to prevent a full app crash (White Screen of Death).
+    let apiKey: string | undefined;
+    
+    try {
+      apiKey = process.env.API_KEY;
+    } catch (e) {
+      console.warn("Environment variable access failed. AI features will be unavailable.");
+    }
+
     if (!apiKey) {
       console.warn("Gemini API Key is missing. AI features will be disabled.");
-      // In a real app we might throw or handle this gracefully in UI
-      // Returning a dummy client or handling null in caller is better
-      throw new Error("API Key missing");
+      // Return null instead of throwing to keep the UI alive
+      return null;
     }
-    client = new GoogleGenAI({ apiKey });
+    
+    try {
+      client = new GoogleGenAI({ apiKey });
+    } catch (error) {
+       console.error("Failed to initialize Gemini client:", error);
+       return null;
+    }
   }
   return client;
 };
@@ -22,6 +36,10 @@ export const sendMessageToGemini = async (
 ): Promise<string> => {
   try {
     const ai = getClient();
+    
+    if (!ai) {
+      return "Status: Offline. I cannot connect to the command center (API Key missing). Please contact HQ by phone.";
+    }
     
     // Construct a context-aware prompt
     const systemInstruction = `You are "Sergeant Shingle", the AI virtual assistant for Mil-Spec Roofing. 
@@ -36,23 +54,12 @@ export const sendMessageToGemini = async (
 
     const model = "gemini-2.5-flash";
     
-    // Simple history management: combine last few turns + current message
-    // Ideally we use ai.chats.create() for stateful sessions, but for a simple helper, 
-    // sending a combined prompt works well for stateless robustness or simple context.
-    // Here we will use the Chat API for better conversation handling.
-
     const chat = ai.chats.create({
       model: model,
       config: {
         systemInstruction: systemInstruction,
       }
     });
-
-    // Note: In a real persistent app we would pass the full history array to history param.
-    // For this demo, we are just sending the new message to a fresh chat instance 
-    // but prepending context manually if needed, or relying on the user to keep context 
-    // simple. To properly do history, we would map our internal history to the SDK's Content format.
-    // For simplicity and robustness in this demo snippet:
     
     const result: GenerateContentResponse = await chat.sendMessage({
       message: message
