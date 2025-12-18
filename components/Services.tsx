@@ -57,12 +57,11 @@ const services: ServiceItem[] = [
   {
     id: 'inspection',
     title: 'Mil-Spec Inspection',
-    description: 'Detailed 21-point roof inspections to identify potential issues before they become costly failures.',
+    description: 'Detailed multipoint inspections to identify potential issues before they become costly failures.',
     iconName: 'Shield',
-    longDescription: "Don't wait for a leak to reveal a weakness. Our Mil-Spec 21-Point Inspection is a tactical assessment of your roof's integrity. We use drone technology and thermal imaging to detect subsurface moisture and structural anomalies that the naked eye misses. You receive a comprehensive digital report with graded priorities.",
+    longDescription: "Don't wait for a leak to reveal a weakness. Our Mil-Spec multi-point inspection is a tactical assessment of your roof's integrity. We use drone technology and hands-on inspection to detect potential leak points and structural anomalies that the naked eye misses. You receive a comprehensive digital report with graded priorities.",
     benefits: [
       "Drone Aerial Analysis",
-      "Thermal Moisture Detection",
       "Detailed Photo Report with Action Plan",
       "3-5 Year Lifespan Projections"
     ],
@@ -78,7 +77,7 @@ const services: ServiceItem[] = [
     iconName: 'Ruler',
     longDescription: "Water management is critical to foundation health. Our seamless gutter systems are fabricated on-site for a perfect fit, eliminating leak points. Coupled with our high-durability siding options (Fiber Cement or Vinyl), we harden your home's exterior envelope against wind, rain, and thermal bridging.",
     benefits: [
-      "Seamless Aluminum & Copper Gutters",
+      "Seamless Aluminum Gutters",
       "Advanced Leaf Guard Protection",
       "HardieBoard & Vinyl Siding Installation",
       "Fascia & Soffit Rot Repair"
@@ -96,7 +95,6 @@ const services: ServiceItem[] = [
     longDescription: "The insurance battlefield is complex and bureaucratic. We act as your advocate, translating technical roofing data into the language adjusters understand. We ensure your policy is honored to its full extent, covering not just the roof, but all collateral damage including gutters, screens, and fences.",
     benefits: [
       "Xactimate Estimates (Industry Standard)",
-      "Code Upgrade Coverage Assistance",
       "Supplemental Damage Documentation",
       "Zero-Stress Paperwork Handling"
     ],
