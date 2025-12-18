@@ -140,21 +140,21 @@ const Services: React.FC = () => {
           {services.map((service) => {
             const Icon = IconMap[service.iconName];
             return (
-              <div 
-                key={service.id} 
+              <div
+                key={service.id}
                 onClick={() => openModal(service)}
                 className="group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
               >
                 <div className="absolute top-0 left-0 w-2 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-                
+
                 <div className="mb-6 inline-block p-4 bg-white rounded-full shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center">
                   <Icon className="h-8 w-8" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-slate-600 leading-relaxed mb-6 flex-grow">
                   {service.description}
                 </p>
@@ -171,11 +171,11 @@ const Services: React.FC = () => {
       {/* Modal Overlay */}
       {selectedService && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-          <div 
-            className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity" 
+          <div
+            className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity"
             onClick={closeModal}
           ></div>
-          
+
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative z-10 animate-in fade-in zoom-in duration-200">
             {/* Modal Header */}
             <div className="bg-slate-50 p-6 md:p-8 border-b border-slate-100 flex justify-between items-start sticky top-0 z-20">
@@ -188,7 +188,7 @@ const Services: React.FC = () => {
                   <p className="text-slate-500 text-sm uppercase tracking-wider font-semibold">Service Briefing</p>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={closeModal}
                 className="p-2 hover:bg-slate-200 rounded-full transition-colors"
               >
@@ -230,7 +230,7 @@ const Services: React.FC = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-slate-100">
-                <button 
+                <button
                   onClick={() => {
                     closeModal();
                     document.getElementById(SectionId.CONTACT)?.scrollIntoView({ behavior: 'smooth' });
@@ -239,7 +239,7 @@ const Services: React.FC = () => {
                 >
                   Request This Service
                 </button>
-                <button 
+                <button
                   onClick={closeModal}
                   className="flex-1 bg-white border-2 border-slate-200 hover:border-slate-300 text-slate-700 py-4 px-6 rounded-lg font-bold uppercase tracking-wider transition-colors text-center"
                 >
