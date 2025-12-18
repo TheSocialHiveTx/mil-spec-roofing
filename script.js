@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       residential: {
         title: 'Residential Roofing',
         icon: 'home',
-        longDescription: "Your home is your sanctuary, and the roof is its first line of defense. We specialize in high-performance residential roofing systems that blend aesthetic appeal with military-grade durability. Whether you prefer architectural shingles, impact-resistant synthetic slate, or standing seam metal, our installation process is rigorous, documented, and backed by a lifetime workmanship guarantee.",
+        longDescription: "Your home is your sanctuary, and the roof is its first line of defense. We specialize in high-performance residential roofing systems that blend aesthetic appeal with military-grade precision installation. Whether you prefer architectural shingles, impact-resistant synthetic slate, or standing seam metal, our installation process is rigorous, documented, and backed by a workmanship guarantee.",
         benefits: ["Lifetime Manufacturer Warranties", "Class 4 Impact Resistance", "Enhanced Ventilation", "Flawless Cleanup"]
       },
       commercial: {
