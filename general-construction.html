@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>General Construction | Mil-Spec Roofing</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body class="bg-slate-50 font-sans text-slate-900">
 
     <!-- Navbar -->
@@ -25,30 +27,43 @@
             <!-- Logo -->
             <a href="index.html" class="flex items-center cursor-pointer group">
                 <div class="flex flex-col items-center">
-                    <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto">
+                    <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="h-12 w-auto">
                         <path d="M20 50 L80 10" stroke="#4b5563" stroke-width="6" stroke-linecap="round" />
-                        <path d="M70 25 L95 45 L140 5" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M70 25 L95 45 L140 5" stroke="#2563eb" stroke-width="6" stroke-linecap="round"
+                            stroke-linejoin="round" />
                         <path d="M130 15 L190 50" stroke="#4b5563" stroke-width="6" stroke-linecap="round" />
-                        <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="#1e3a8a" letter-spacing="1">MIL-SPEC</text>
-                        <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563" letter-spacing="0.5">ROOFING</text>
-                        <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563" letter-spacing="0.5">& CONST.</text>
+                        <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="#1e3a8a"
+                            letter-spacing="1">MIL-SPEC</text>
+                        <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563"
+                            letter-spacing="0.5">ROOFING</text>
+                        <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563"
+                            letter-spacing="0.5">& CONST.</text>
                     </svg>
                 </div>
             </a>
 
             <!-- Desktop Menu -->
             <div class="hidden lg:flex space-x-6" id="desktop-menu">
-                <a href="index.html" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Home</a>
-                <a href="index.html#services" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Services</a>
-                <a href="general-construction.html" class="nav-link text-sm font-bold uppercase tracking-wide text-blue-600 transition-colors duration-200">General Construction</a>
-                <a href="index.html#about" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">About</a>
-                <a href="index.html#gallery" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Gallery</a>
-                <a href="index.html#contact" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Contact</a>
+                <a href="index.html"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Home</a>
+                <a href="index.html#services"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Services</a>
+                <a href="general-construction.html"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-blue-600 transition-colors duration-200">General
+                    Construction</a>
+                <a href="index.html#about"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">About</a>
+                <a href="index.html#gallery"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Gallery</a>
+                <a href="index.html#contact"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Contact</a>
             </div>
 
             <!-- CTA Button -->
             <div class="hidden lg:block">
-                <a href="index.html#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
+                <a href="index.html#contact"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
                     Get Estimate
                 </a>
             </div>
@@ -62,15 +77,25 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
             <div class="flex flex-col p-4 space-y-4">
-                <a href="index.html" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Home</a>
-                <a href="index.html#services" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Services</a>
-                <a href="general-construction.html" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-blue-600">General Construction</a>
-                <a href="index.html#about" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">About</a>
-                <a href="index.html#gallery" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Gallery</a>
-                <a href="index.html#contact" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Contact</a>
-                <a href="index.html#contact" class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md">Get Free Estimate</a>
+                <a href="index.html"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Home</a>
+                <a href="index.html#services"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Services</a>
+                <a href="general-construction.html"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-blue-600">General
+                    Construction</a>
+                <a href="index.html#about"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">About</a>
+                <a href="index.html#gallery"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Gallery</a>
+                <a href="index.html#contact"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Contact</a>
+                <a href="index.html#contact"
+                    class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md">Get
+                    Free Estimate</a>
             </div>
         </div>
     </nav>
@@ -80,26 +105,32 @@
         <!-- Hero Section -->
         <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-slate-900">
             <div class="absolute inset-0 z-0">
-                 <img src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg" class="w-full h-full object-cover opacity-30" alt="Construction Site" />
+                <img src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg"
+                    class="w-full h-full object-cover opacity-30" alt="Construction Site" />
             </div>
 
             <div class="container mx-auto px-4 relative z-10 text-center">
-                <div class="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm">
-                    <span class="text-blue-200 text-xs font-bold uppercase tracking-widest">General Construction Division</span>
+                <div
+                    class="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm">
+                    <span class="text-blue-200 text-xs font-bold uppercase tracking-widest">General Construction
+                        Division</span>
                 </div>
-                
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-xl">
+
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-white drop-shadow-xl">
                     Beyond the Roof: <br />
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                         Full Property Support
                     </span>
                 </h1>
-                
+
                 <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-                    We bring the same Mil-Spec discipline to your entire property. From structural framing to interior finishes, we execute with precision.
+                    We bring the same Mil-Spec discipline to your entire property. From structural framing to interior
+                    finishes, we execute with precision.
                 </p>
-                
-                <a href="index.html#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider inline-flex items-center justify-center transition-all shadow-lg hover:shadow-blue-500/25">
+
+                <a href="index.html#contact"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider inline-flex items-center justify-center transition-all shadow-lg hover:shadow-blue-500/25">
                     Start Your Project
                     <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
                 </a>
@@ -112,94 +143,95 @@
                 <!-- Residential -->
                 <div class="mb-20">
                     <div class="flex items-center mb-12">
-                         <div class="bg-blue-100 p-3 rounded-lg mr-4 text-blue-600"><i data-lucide="home" class="h-8 w-8"></i></div>
-                         <div>
-                             <h2 class="text-3xl font-bold text-slate-900 uppercase tracking-tight">Residential Operations</h2>
-                             <p class="text-slate-500">Upgrade and fortify your home.</p>
-                         </div>
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4 text-blue-600"><i data-lucide="home"
+                                class="h-8 w-8"></i></div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-slate-900 uppercase tracking-tight">Residential
+                                Operations</h2>
+                            <p class="text-slate-500">Upgrade and fortify your home.</p>
+                        </div>
                     </div>
-                    
+
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 transition-colors">
+                        <div
+                            class="bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 transition-colors">
                             <h3 class="text-xl font-bold text-slate-900 mb-3">Siding & Cladding</h3>
-                            <p class="text-slate-600 mb-4">Installation of HardieBoard, vinyl, and wood siding to harden your home's exterior.</p>
+                            <p class="text-slate-600 mb-4">Installation of HardieBoard, vinyl, and wood siding to harden
+                                your home's exterior.</p>
                             <ul class="text-sm text-slate-500 space-y-2">
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Weatherproofing</li>
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Thermal Insulation</li>
+                                <li class="flex items-center"><i data-lucide="check"
+                                        class="h-4 w-4 text-blue-500 mr-2"></i> Weatherproofing</li>
+                                <li class="flex items-center"><i data-lucide="check"
+                                        class="h-4 w-4 text-blue-500 mr-2"></i> Thermal Insulation</li>
                             </ul>
                         </div>
-                        <div class="bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 transition-colors">
-                            <h3 class="text-xl font-bold text-slate-900 mb-3">Window Replacement</h3>
-                            <p class="text-slate-600 mb-4">High-efficiency window units that reduce energy costs and improve security.</p>
-                             <ul class="text-sm text-slate-500 space-y-2">
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Double/Triple Pane</li>
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Impact Resistant</li>
-                            </ul>
-                        </div>
-                        <div class="bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 transition-colors">
-                            <h3 class="text-xl font-bold text-slate-900 mb-3">Patios & Decks</h3>
-                            <p class="text-slate-600 mb-4">Custom outdoor living spaces designed for durability and comfort.</p>
-                             <ul class="text-sm text-slate-500 space-y-2">
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Covered Pergolas</li>
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Composite Decking</li>
-                            </ul>
-                        </div>
-                        <div class="bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 transition-colors">
+
+
+                        <div
+                            class="bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 transition-colors">
                             <h3 class="text-xl font-bold text-slate-900 mb-3">Concrete Work</h3>
-                            <p class="text-slate-600 mb-4">Precision pouring for driveways, walkways, and foundations.</p>
-                             <ul class="text-sm text-slate-500 space-y-2">
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Stamped & Stained</li>
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Structural Repair</li>
+                            <p class="text-slate-600 mb-4">Precision pouring for driveways, walkways, and foundations.
+                            </p>
+                            <ul class="text-sm text-slate-500 space-y-2">
+                                <li class="flex items-center"><i data-lucide="check"
+                                        class="h-4 w-4 text-blue-500 mr-2"></i> Stamped & Stained</li>
+                                <li class="flex items-center"><i data-lucide="check"
+                                        class="h-4 w-4 text-blue-500 mr-2"></i> Structural Repair</li>
                             </ul>
                         </div>
-                        <div class="bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 transition-colors">
+                        <div
+                            class="bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 transition-colors">
                             <h3 class="text-xl font-bold text-slate-900 mb-3">Fencing</h3>
-                            <p class="text-slate-600 mb-4">Secure your perimeter with high-quality fencing solutions.</p>
-                             <ul class="text-sm text-slate-500 space-y-2">
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Cedar & Pine</li>
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Wrought Iron</li>
+                            <p class="text-slate-600 mb-4">Secure your perimeter with high-quality fencing solutions.
+                            </p>
+                            <ul class="text-sm text-slate-500 space-y-2">
+                                <li class="flex items-center"><i data-lucide="check"
+                                        class="h-4 w-4 text-blue-500 mr-2"></i> Cedar & Pine</li>
+                                <li class="flex items-center"><i data-lucide="check"
+                                        class="h-4 w-4 text-blue-500 mr-2"></i> Wrought Iron</li>
                             </ul>
                         </div>
-                        <div class="bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 transition-colors">
-                            <h3 class="text-xl font-bold text-slate-900 mb-3">Interior Remodeling</h3>
-                            <p class="text-slate-600 mb-4">Kitchen and bath renovations managed with strict timelines.</p>
-                             <ul class="text-sm text-slate-500 space-y-2">
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Cabinetry & Countertops</li>
-                                <li class="flex items-center"><i data-lucide="check" class="h-4 w-4 text-blue-500 mr-2"></i> Flooring</li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
 
                 <!-- Commercial -->
                 <div>
-                     <div class="flex items-center mb-12">
-                         <div class="bg-slate-100 p-3 rounded-lg mr-4 text-slate-700"><i data-lucide="building" class="h-8 w-8"></i></div>
-                         <div>
-                             <h2 class="text-3xl font-bold text-slate-900 uppercase tracking-tight">Commercial Logistics</h2>
-                             <p class="text-slate-500">Facility improvements and build-outs.</p>
-                         </div>
+                    <div class="flex items-center mb-12">
+                        <div class="bg-slate-100 p-3 rounded-lg mr-4 text-slate-700"><i data-lucide="building"
+                                class="h-8 w-8"></i></div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-slate-900 uppercase tracking-tight">Commercial Logistics
+                            </h2>
+                            <p class="text-slate-500">Facility improvements and build-outs.</p>
+                        </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6">
+                        <div
+                            class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6">
                             <div class="bg-blue-50 p-4 rounded-lg flex items-center justify-center h-fit">
                                 <i data-lucide="layout" class="h-8 w-8 text-blue-600"></i>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-slate-900 mb-2">Tenant Improvements (TI)</h3>
-                                <p class="text-slate-600 mb-4">Rapid office reconfiguration and retail build-outs to get your business operational faster.</p>
-                                <a href="index.html#contact" class="text-blue-600 font-bold text-sm hover:underline">Request Bid &rarr;</a>
+                                <p class="text-slate-600 mb-4">Rapid office reconfiguration and retail build-outs to get
+                                    your business operational faster.</p>
+                                <a href="index.html#contact"
+                                    class="text-blue-600 font-bold text-sm hover:underline">Request Bid &rarr;</a>
                             </div>
                         </div>
-                         <div class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6">
+                        <div
+                            class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6">
                             <div class="bg-blue-50 p-4 rounded-lg flex items-center justify-center h-fit">
                                 <i data-lucide="hammer" class="h-8 w-8 text-blue-600"></i>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-slate-900 mb-2">Metal Framing & Drywall</h3>
-                                <p class="text-slate-600 mb-4">Structural steel framing and commercial-grade drywall installation for warehouses and offices.</p>
-                                <a href="index.html#contact" class="text-blue-600 font-bold text-sm hover:underline">Request Bid &rarr;</a>
+                                <p class="text-slate-600 mb-4">Structural steel framing and commercial-grade drywall
+                                    installation for warehouses and offices.</p>
+                                <a href="index.html#contact"
+                                    class="text-blue-600 font-bold text-sm hover:underline">Request Bid &rarr;</a>
                             </div>
                         </div>
                     </div>
@@ -211,8 +243,10 @@
         <section class="py-16 bg-blue-600 text-white text-center">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-4">Ready to Break Ground?</h2>
-                <p class="text-blue-100 mb-8 max-w-2xl mx-auto">Contact our General Construction division for a detailed site assessment and quote.</p>
-                <a href="index.html#contact" class="bg-white text-blue-600 hover:bg-slate-100 px-8 py-4 rounded-sm font-bold uppercase tracking-wider transition-colors inline-block">
+                <p class="text-blue-100 mb-8 max-w-2xl mx-auto">Contact our General Construction division for a detailed
+                    site assessment and quote.</p>
+                <a href="index.html#contact"
+                    class="bg-white text-blue-600 hover:bg-slate-100 px-8 py-4 rounded-sm font-bold uppercase tracking-wider transition-colors inline-block">
                     Contact HQ
                 </a>
             </div>
@@ -223,72 +257,87 @@
     <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-              
-              <!-- Brand -->
-              <div>
-                <div class="flex items-center mb-6">
-                  <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto opacity-90">
-                    <path d="M20 50 L80 10" stroke="white" stroke-width="6" stroke-linecap="round" />
-                    <path d="M70 25 L95 45 L140 5" stroke="#3b82f6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M130 15 L190 50" stroke="white" stroke-width="6" stroke-linecap="round" />
-                    <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="white" letter-spacing="1">MIL-SPEC</text>
-                    <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14" fill="#94a3b8" letter-spacing="0.5">ROOFING</text>
-                    <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14" fill="#94a3b8" letter-spacing="0.5">& CONST.</text>
-                  </svg>
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-auto opacity-90">
+                            <path d="M20 50 L80 10" stroke="white" stroke-width="6" stroke-linecap="round" />
+                            <path d="M70 25 L95 45 L140 5" stroke="#3b82f6" stroke-width="6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M130 15 L190 50" stroke="white" stroke-width="6" stroke-linecap="round" />
+                            <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="white"
+                                letter-spacing="1">MIL-SPEC</text>
+                            <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14"
+                                fill="#94a3b8" letter-spacing="0.5">ROOFING</text>
+                            <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14"
+                                fill="#94a3b8" letter-spacing="0.5">& CONST.</text>
+                        </svg>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Dedicated to providing military-grade roofing solutions with precision, integrity, and unmatched
+                        durability.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="facebook"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="twitter"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="instagram"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="linkedin"
+                                class="h-5 w-5"></i></a>
+                    </div>
                 </div>
-                <p class="text-sm leading-relaxed mb-6">
-                  Dedicated to providing military-grade roofing solutions with precision, integrity, and unmatched durability.
-                </p>
-                <div class="flex space-x-4">
-                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="facebook" class="h-5 w-5"></i></a>
-                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="twitter" class="h-5 w-5"></i></a>
-                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="instagram" class="h-5 w-5"></i></a>
-                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
                 </div>
-              </div>
-    
-              <!-- Links -->
-              <div>
-                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
-                <ul class="space-y-3 text-sm">
-                  <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
-                  <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                  <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                </ul>
-              </div>
-    
-              <!-- Services -->
-              <div>
-                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Services</h4>
-                <ul class="space-y-3 text-sm">
-                  <li><a href="index.html#services" class="hover:text-white transition-colors">Roofing</a></li>
-                  <li><a href="general-construction.html" class="hover:text-white transition-colors">General Construction</a></li>
-                  <li><a href="index.html#services" class="hover:text-white transition-colors">Storm Repair</a></li>
-                </ul>
-              </div>
-    
-              <!-- Newsletter -->
-              <div>
-                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Stay Informed</h4>
-                <p class="text-sm mb-4">Subscribe for maintenance tips and seasonal alerts.</p>
-                <div class="flex">
-                  <input type="email" placeholder="Email Address" class="bg-slate-900 border border-slate-800 text-white px-4 py-2 rounded-l-md outline-none focus:border-blue-600 w-full" />
-                  <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors">
-                    Go
-                  </button>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Roofing</a></li>
+                        <li><a href="general-construction.html" class="hover:text-white transition-colors">General
+                                Construction</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Storm Repair</a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Stay Informed</h4>
+                    <p class="text-sm mb-4">Subscribe for maintenance tips and seasonal alerts.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email Address"
+                            class="bg-slate-900 border border-slate-800 text-white px-4 py-2 rounded-l-md outline-none focus:border-blue-600 w-full" />
+                        <button
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors">
+                            Go
+                        </button>
+                    </div>
+                </div>
             </div>
-    
+
             <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-              <p>&copy; 2024 Mil-Spec Roofing & Construction. All rights reserved.</p>
-              <p class="mt-2 md:mt-0">Built for precision.</p>
+                <p>&copy; 2024 Mil-Spec Roofing & Construction. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Built for precision.</p>
             </div>
         </div>
     </footer>
 
     <!-- Sticky CTA Button -->
-    <a href="index.html#contact" class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group">
+    <a href="index.html#contact"
+        class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group">
         <i data-lucide="clipboard-check" class="h-6 w-6 group-hover:animate-pulse"></i>
         <span class="hidden md:inline">Get Free Estimate</span>
         <span class="md:hidden">Estimate</span>
@@ -297,4 +346,5 @@
     <!-- Main Logic Script (Defer to wait for DOM) -->
     <script src="script.js" defer></script>
 </body>
+
 </html>
