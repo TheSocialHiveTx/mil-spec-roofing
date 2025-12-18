@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mil-Spec Roofing | Precision & Integrity</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
@@ -27,6 +28,7 @@
 }
 </script>
 </head>
+
 <body class="bg-slate-50 font-sans text-slate-900">
 
     <!-- Navbar -->
@@ -35,30 +37,45 @@
             <!-- Logo -->
             <a href="index.html" class="flex items-center cursor-pointer group">
                 <div class="flex flex-col items-center">
-                    <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto">
+                    <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="h-12 w-auto">
                         <path d="M20 50 L80 10" stroke="#4b5563" stroke-width="6" stroke-linecap="round" />
-                        <path d="M70 25 L95 45 L140 5" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M70 25 L95 45 L140 5" stroke="#2563eb" stroke-width="6" stroke-linecap="round"
+                            stroke-linejoin="round" />
                         <path d="M130 15 L190 50" stroke="#4b5563" stroke-width="6" stroke-linecap="round" />
-                        <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="#1e3a8a" letter-spacing="1">MIL-SPEC</text>
-                        <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563" letter-spacing="0.5">ROOFING</text>
-                        <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563" letter-spacing="0.5">& CONST.</text>
+                        <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="#1e3a8a"
+                            letter-spacing="1">MIL-SPEC</text>
+                        <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563"
+                            letter-spacing="0.5">ROOFING</text>
+                        <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563"
+                            letter-spacing="0.5">& CONST.</text>
                     </svg>
                 </div>
             </a>
 
             <!-- Desktop Menu -->
             <div class="hidden lg:flex space-x-6" id="desktop-menu">
-                <a href="index.html" class="nav-link text-sm font-bold uppercase tracking-wide text-blue-600 transition-colors duration-200">Home</a>
-                <a href="index.html#services" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Services</a>
-                <a href="general-construction.html" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">General Construction</a>
-                <a href="index.html#about" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">About</a>
-                <a href="index.html#gallery" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Gallery</a>
-                <a href="index.html#contact" class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Contact</a>
+                <a href="index.html"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-blue-600 transition-colors duration-200">Home</a>
+                <a href="index.html#services"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Services</a>
+                <a href="general-construction.html"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">General
+                    Construction</a>
+                <a href="faq.html"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">FAQ</a>
+                <a href="index.html#about"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">About</a>
+                <a href="index.html#gallery"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Gallery</a>
+                <a href="index.html#contact"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Contact</a>
             </div>
 
             <!-- CTA Button -->
             <div class="hidden lg:block">
-                <a href="index.html#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
+                <a href="index.html#contact"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
                     Get Estimate
                 </a>
             </div>
@@ -72,15 +89,27 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
             <div class="flex flex-col p-4 space-y-4">
-                <a href="index.html" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Home</a>
-                <a href="index.html#services" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Services</a>
-                <a href="general-construction.html" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">General Construction</a>
-                <a href="index.html#about" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">About</a>
-                <a href="index.html#gallery" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Gallery</a>
-                <a href="index.html#contact" class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Contact</a>
-                <a href="index.html#contact" class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md">Get Free Estimate</a>
+                <a href="index.html"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Home</a>
+                <a href="index.html#services"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Services</a>
+                <a href="general-construction.html"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">General
+                    Construction</a>
+                <a href="faq.html"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">FAQ</a>
+                <a href="index.html#about"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">About</a>
+                <a href="index.html#gallery"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Gallery</a>
+                <a href="index.html#contact"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Contact</a>
+                <a href="index.html#contact"
+                    class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md">Get
+                    Free Estimate</a>
             </div>
         </div>
     </nav>
@@ -90,41 +119,55 @@
         <!-- Hero Section -->
         <section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <video autoPlay loop muted playsInline class="w-full h-full object-cover" poster="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg">
-                    <source src="https://videos.pexels.com/video-files/1536304/1536304-hd_1920_1080_30fps.mp4" type="video/mp4" />
+                <video autoPlay loop muted playsInline class="w-full h-full object-cover"
+                    poster="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg">
+                    <source src="https://videos.pexels.com/video-files/1536304/1536304-hd_1920_1080_30fps.mp4"
+                        type="video/mp4" />
                 </video>
-                <div class="absolute inset-0 bg-slate-900/60 bg-gradient-to-t from-slate-900 via-slate-900/50 to-slate-900/30"></div>
+                <div
+                    class="absolute inset-0 bg-slate-900/60 bg-gradient-to-t from-slate-900 via-slate-900/50 to-slate-900/30">
+                </div>
             </div>
 
             <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center pt-20">
                 <div class="w-full md:w-2/3 text-white text-center md:text-left">
-                    <div class="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm">
+                    <div
+                        class="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm">
                         <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                        <span class="text-blue-200 text-xs font-bold uppercase tracking-widest">Veteran Owned & Operated</span>
+                        <span class="text-blue-200 text-xs font-bold uppercase tracking-widest">Veteran Owned &
+                            Operated</span>
                     </div>
-                    
+
                     <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-xl">
                         Military Grade <br />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 filter drop-shadow-lg">
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 filter drop-shadow-lg">
                             Roofing Standards
                         </span>
                     </h1>
-                    
-                    <p class="text-lg md:text-xl text-slate-100 mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed drop-shadow-md">
-                        We bring the precision, integrity, and durability of military specifications to your home. Protect your biggest investment with Mil-Spec Roofing.
+
+                    <p
+                        class="text-lg md:text-xl text-slate-100 mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed drop-shadow-md">
+                        We bring the precision, integrity, and durability of military specifications to your home.
+                        Protect your biggest investment with Mil-Spec Roofing.
                     </p>
-                    
-                    <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
-                        <a href="#contact" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider flex items-center justify-center transition-all shadow-lg hover:shadow-blue-500/25 group backdrop-blur-sm">
+
+                    <div
+                        class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <a href="#contact"
+                            class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider flex items-center justify-center transition-all shadow-lg hover:shadow-blue-500/25 group backdrop-blur-sm">
                             Get Free Quote
-                            <i data-lucide="arrow-right" class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                            <i data-lucide="arrow-right"
+                                class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
                         </a>
-                        <a href="#services" class="w-full sm:w-auto bg-white/10 border-2 border-white/80 hover:bg-white hover:text-slate-900 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider transition-all backdrop-blur-sm text-center">
+                        <a href="#services"
+                            class="w-full sm:w-auto bg-white/10 border-2 border-white/80 hover:bg-white hover:text-slate-900 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider transition-all backdrop-blur-sm text-center">
                             Our Services
                         </a>
                     </div>
 
-                    <div class="mt-12 flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 text-sm font-semibold text-slate-200 drop-shadow-md">
+                    <div
+                        class="mt-12 flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 text-sm font-semibold text-slate-200 drop-shadow-md">
                         <div class="flex items-center space-x-2">
                             <i data-lucide="check-circle" class="text-blue-500 h-5 w-5"></i>
                             <span>Licensed & Insured</span>
@@ -151,89 +194,139 @@
                     </h2>
                     <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full mb-6"></div>
                     <p class="text-slate-600 max-w-2xl mx-auto text-lg">
-                        From minor repairs to major installations, we execute every project with military precision. Click on any service for a detailed briefing.
+                        From minor repairs to major installations, we execute every project with military precision.
+                        Click on any service for a detailed briefing.
                     </p>
                 </div>
 
                 <!-- Services Grid (Static HTML to prevent load issues) -->
                 <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
+
                     <!-- Service 1: Residential -->
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="residential">
-                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="residential">
+                        <div
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="home" class="h-8 w-8"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Residential Roofing</h3>
-                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Complete roof replacements using premium asphalt, metal, or tile materials with industry-leading warranties.</p>
-                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                        <h3
+                            class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">
+                            Residential Roofing</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Complete roof
+                            replacements using premium asphalt, metal, or tile materials with industry-leading
+                            warranties.</p>
+                        <div
+                            class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
                             View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
                         </div>
-                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                        </div>
                     </div>
 
                     <!-- Service 2: Commercial -->
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="commercial">
-                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="commercial">
+                        <div
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="hard-hat" class="h-8 w-8"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Commercial Roofing</h3>
-                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Flat roof solutions (TPO, EPDM) designed for durability and energy efficiency for your business.</p>
-                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                        <h3
+                            class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">
+                            Commercial Roofing</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Flat roof solutions (TPO,
+                            EPDM) designed for durability and energy efficiency for your business.</p>
+                        <div
+                            class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
                             View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
                         </div>
-                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                        </div>
                     </div>
 
                     <!-- Service 3: Repair -->
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="repair">
-                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="repair">
+                        <div
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="wrench" class="h-8 w-8"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Storm Damage Repair</h3>
-                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Rapid response teams for leak detection, shingle replacement, and emergency storm damage mitigation.</p>
-                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                        <h3
+                            class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">
+                            Storm Damage Repair</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Rapid response teams for
+                            leak detection, shingle replacement, and emergency storm damage mitigation.</p>
+                        <div
+                            class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
                             View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
                         </div>
-                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                        </div>
                     </div>
 
                     <!-- Service 4: Inspection -->
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="inspection">
-                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="inspection">
+                        <div
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="shield" class="h-8 w-8"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Mil-Spec Inspection</h3>
-                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Detailed 21-point roof inspections to identify potential issues before they become costly failures.</p>
-                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                        <h3
+                            class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">
+                            Mil-Spec Inspection</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Detailed 21-point roof
+                            inspections to identify potential issues before they become costly failures.</p>
+                        <div
+                            class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
                             View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
                         </div>
-                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                        </div>
                     </div>
 
                     <!-- Service 5: Gutters -->
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="gutters">
-                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="gutters">
+                        <div
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="ruler" class="h-8 w-8"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Gutters & Siding</h3>
-                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Seamless gutter installation and premium siding solutions to protect your home's exterior envelope.</p>
-                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                        <h3
+                            class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">
+                            Gutters & Siding</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">Seamless gutter
+                            installation and premium siding solutions to protect your home's exterior envelope.</p>
+                        <div
+                            class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
                             View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
                         </div>
-                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                        </div>
                     </div>
 
                     <!-- Service 6: Insurance -->
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full" data-id="insurance">
-                        <div class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="insurance">
+                        <div
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="umbrella" class="h-8 w-8"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Insurance Claims</h3>
-                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">We navigate the complex insurance process for you, ensuring you get the full coverage you deserve.</p>
-                        <div class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
+                        <h3
+                            class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">
+                            Insurance Claims</h3>
+                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow relative z-10">We navigate the complex
+                            insurance process for you, ensuring you get the full coverage you deserve.</p>
+                        <div
+                            class="flex items-center text-blue-600 font-semibold text-sm uppercase tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 relative z-10">
                             View Details <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
                         </div>
-                        <div class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                        <div
+                            class="absolute top-0 left-0 w-1 h-full bg-blue-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -251,55 +344,75 @@
                             The <span class="text-blue-500">Mil-Spec</span> Difference
                         </h2>
                         <p class="text-slate-300 text-lg mb-6 leading-relaxed">
-                            We operate on a simple code: <strong>Mission First, People Always.</strong> Our team is comprised of skilled craftsmen who treat every home as if it were their own barracks. We don't cut corners, and we don't retreat until the job is done right.
+                            We operate on a simple code: <strong>Mission First, People Always.</strong> Our team is
+                            comprised of skilled craftsmen who treat every home as if it were their own barracks. We
+                            don't cut corners, and we don't retreat until the job is done right.
                         </p>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
+                                <div
+                                    class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
                                     <span class="text-xs font-bold">1</span>
                                 </div>
                                 <div class="ml-4">
                                     <h4 class="text-xl font-bold">Uncompromising Quality</h4>
-                                    <p class="text-slate-400 text-sm">We use only top-tier materials rated for extreme weather conditions.</p>
+                                    <p class="text-slate-400 text-sm">We use only top-tier materials rated for extreme
+                                        weather conditions.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
+                                <div
+                                    class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
                                     <span class="text-xs font-bold">2</span>
                                 </div>
                                 <div class="ml-4">
                                     <h4 class="text-xl font-bold">Disciplined Execution</h4>
-                                    <p class="text-slate-400 text-sm">On time, on budget, and site cleaned daily. No excuses.</p>
+                                    <p class="text-slate-400 text-sm">On time, on budget, and site cleaned daily. No
+                                        excuses.</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
-                                <div class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
+                                <div
+                                    class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
                                     <span class="text-xs font-bold">3</span>
                                 </div>
                                 <div class="ml-4">
                                     <h4 class="text-xl font-bold">Transparent Communication</h4>
-                                    <p class="text-slate-400 text-sm">Clear reporting and honest assessments. No hidden fees.</p>
+                                    <p class="text-slate-400 text-sm">Clear reporting and honest assessments. No hidden
+                                        fees.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
                     <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                        <div class="bg-slate-800 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700 shadow-xl">
-                            <span id="counter-years" class="block text-4xl md:text-5xl font-extrabold text-blue-500 mb-2 font-mono">0</span>
-                            <span class="text-xs md:text-sm uppercase tracking-wider text-slate-300 font-bold">Years Active</span>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700 shadow-xl">
+                            <span id="counter-years"
+                                class="block text-4xl md:text-5xl font-extrabold text-blue-500 mb-2 font-mono">0</span>
+                            <span class="text-xs md:text-sm uppercase tracking-wider text-slate-300 font-bold">Years
+                                Active</span>
                         </div>
-                        <div class="bg-slate-800 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700 shadow-xl mt-8">
-                            <span id="counter-missions" class="block text-4xl md:text-5xl font-extrabold text-blue-500 mb-2 font-mono">0</span>
-                            <span class="text-xs md:text-sm uppercase tracking-wider text-slate-300 font-bold">Missions Complete</span>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700 shadow-xl mt-8">
+                            <span id="counter-missions"
+                                class="block text-4xl md:text-5xl font-extrabold text-blue-500 mb-2 font-mono">0</span>
+                            <span class="text-xs md:text-sm uppercase tracking-wider text-slate-300 font-bold">Missions
+                                Complete</span>
                         </div>
-                        <div class="bg-slate-800 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700 shadow-xl">
-                            <span id="counter-satisfaction" class="block text-4xl md:text-5xl font-extrabold text-blue-500 mb-2 font-mono">0%</span>
-                            <span class="text-xs md:text-sm uppercase tracking-wider text-slate-300 font-bold">Satisfaction Rate</span>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700 shadow-xl">
+                            <span id="counter-satisfaction"
+                                class="block text-4xl md:text-5xl font-extrabold text-blue-500 mb-2 font-mono">0%</span>
+                            <span
+                                class="text-xs md:text-sm uppercase tracking-wider text-slate-300 font-bold">Satisfaction
+                                Rate</span>
                         </div>
-                        <div class="bg-slate-800 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700 shadow-xl mt-8">
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-slate-700 shadow-xl mt-8">
                             <span class="block text-4xl md:text-5xl font-extrabold text-blue-500 mb-2">A+</span>
-                            <span class="text-xs md:text-sm uppercase tracking-wider text-slate-300 font-bold">BBB Rating</span>
+                            <span class="text-xs md:text-sm uppercase tracking-wider text-slate-300 font-bold">BBB
+                                Rating</span>
                         </div>
                     </div>
                 </div>
@@ -316,7 +429,8 @@
                         </h2>
                         <div class="h-1 w-20 bg-blue-600 rounded-full"></div>
                     </div>
-                    <button class="text-blue-600 font-bold uppercase tracking-wider hover:text-blue-800 transition-colors">
+                    <button
+                        class="text-blue-600 font-bold uppercase tracking-wider hover:text-blue-800 transition-colors">
                         View Full Portfolio &rarr;
                     </button>
                 </div>
@@ -338,21 +452,24 @@
                 </div>
 
                 <div class="max-w-4xl mx-auto relative">
-                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden min-h-[350px] flex flex-col justify-center">
+                    <div
+                        class="bg-slate-50 border border-slate-100 rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden min-h-[350px] flex flex-col justify-center">
                         <div class="absolute top-8 left-8 text-blue-100 transform rotate-180 pointer-events-none">
                             <i data-lucide="quote" class="h-24 w-24"></i>
                         </div>
-                        
+
                         <div id="testimonial-content" class="relative z-10 transition-opacity duration-500 ease-in-out">
                             <!-- Populated by JS -->
                         </div>
 
-                         <!-- Testimonial Controls -->
-                         <div class="flex justify-center gap-4 mt-8 z-20">
-                            <button id="prev-testimonial" class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105">
+                        <!-- Testimonial Controls -->
+                        <div class="flex justify-center gap-4 mt-8 z-20">
+                            <button id="prev-testimonial"
+                                class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105">
                                 <i data-lucide="arrow-left" class="h-5 w-5"></i>
                             </button>
-                            <button id="next-testimonial" class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105">
+                            <button id="next-testimonial"
+                                class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105">
                                 <i data-lucide="arrow-right" class="h-5 w-5"></i>
                             </button>
                         </div>
@@ -364,12 +481,13 @@
         <!-- Contact Section -->
         <section id="contact" class="py-24 bg-white relative">
             <div class="container mx-auto px-4">
-                <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
+                <div
+                    class="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
                     <div class="lg:w-1/3 bg-slate-900 p-12 text-white flex flex-col justify-between">
                         <div>
                             <h2 class="text-3xl font-bold mb-2">Contact HQ</h2>
                             <p class="text-slate-400 mb-8">Ready to secure your roof? Deploy our team today.</p>
-                            
+
                             <div class="space-y-6">
                                 <div class="flex items-start space-x-4">
                                     <i data-lucide="phone" class="text-blue-500 h-6 w-6 mt-1"></i>
@@ -390,13 +508,14 @@
                                     <i data-lucide="map-pin" class="text-blue-500 h-6 w-6 mt-1"></i>
                                     <div>
                                         <h3 class="font-semibold">Base of Operations</h3>
-                                        <p class="text-slate-300">123 Construction Blvd<br/>Fort Worth, TX 76102</p>
+                                        <p class="text-slate-300">123 Construction Blvd<br />Fort Worth, TX 76102</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-12">
-                            <div class="w-full h-40 bg-slate-800 rounded-lg flex items-center justify-center text-slate-500 text-sm">
+                            <div
+                                class="w-full h-40 bg-slate-800 rounded-lg flex items-center justify-center text-slate-500 text-sm">
                                 [Interactive Map Placeholder]
                             </div>
                         </div>
@@ -404,32 +523,42 @@
 
                     <div class="lg:w-2/3 p-12">
                         <h2 class="text-2xl font-bold text-slate-900 mb-6">Request Briefing (Estimate)</h2>
-                        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Transmission Received. Over.');">
+                        <form class="space-y-6"
+                            onsubmit="event.preventDefault(); alert('Transmission Received. Over.');">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
-                                    <input type="text" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="John" />
+                                    <input type="text"
+                                        class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                                        placeholder="John" />
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
-                                    <input type="text" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="Doe" />
+                                    <input type="text"
+                                        class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                                        placeholder="Doe" />
                                 </div>
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">Email</label>
-                                    <input type="email" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="john@example.com" />
+                                    <input type="email"
+                                        class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                                        placeholder="john@example.com" />
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">Phone</label>
-                                    <input type="tel" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="(555) 123-4567" />
+                                    <input type="tel"
+                                        class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                                        placeholder="(555) 123-4567" />
                                 </div>
                             </div>
 
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Service Type</label>
-                                <select class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-600">
+                                <select
+                                    class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-600">
                                     <option>Roof Replacement</option>
                                     <option>Repair / Leak</option>
                                     <option>Inspection</option>
@@ -439,9 +568,12 @@
 
                             <div>
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">Mission Details</label>
-                                <textarea rows="4" class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" placeholder="Describe your project needs..."></textarea>
+                                <textarea rows="4"
+                                    class="w-full px-4 py-3 rounded-md bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                                    placeholder="Describe your project needs..."></textarea>
                             </div>
-                            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-md uppercase tracking-wider shadow-lg hover:shadow-blue-500/30 transition-all">
+                            <button
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-md uppercase tracking-wider shadow-lg hover:shadow-blue-500/30 transition-all">
                                 Send Request
                             </button>
                         </form>
@@ -455,68 +587,81 @@
     <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-              
-              <!-- Brand -->
-              <div>
-                <div class="flex items-center mb-6">
-                  <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto opacity-90">
-                    <path d="M20 50 L80 10" stroke="white" stroke-width="6" stroke-linecap="round" />
-                    <path d="M70 25 L95 45 L140 5" stroke="#3b82f6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M130 15 L190 50" stroke="white" stroke-width="6" stroke-linecap="round" />
-                    <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="white" letter-spacing="1">MIL-SPEC</text>
-                    <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14" fill="#94a3b8" letter-spacing="0.5">ROOFING</text>
-                    <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14" fill="#94a3b8" letter-spacing="0.5">& CONST.</text>
-                  </svg>
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-auto opacity-90">
+                            <path d="M20 50 L80 10" stroke="white" stroke-width="6" stroke-linecap="round" />
+                            <path d="M70 25 L95 45 L140 5" stroke="#3b82f6" stroke-width="6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M130 15 L190 50" stroke="white" stroke-width="6" stroke-linecap="round" />
+                            <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="white"
+                                letter-spacing="1">MIL-SPEC</text>
+                            <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14"
+                                fill="#94a3b8" letter-spacing="0.5">ROOFING</text>
+                            <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14"
+                                fill="#94a3b8" letter-spacing="0.5">& CONST.</text>
+                        </svg>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Dedicated to providing military-grade roofing solutions with precision, integrity, and unmatched
+                        durability.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="facebook"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="twitter"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="instagram"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="linkedin"
+                                class="h-5 w-5"></i></a>
+                    </div>
                 </div>
-                <p class="text-sm leading-relaxed mb-6">
-                  Dedicated to providing military-grade roofing solutions with precision, integrity, and unmatched durability.
-                </p>
-                <div class="flex space-x-4">
-                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="facebook" class="h-5 w-5"></i></a>
-                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="twitter" class="h-5 w-5"></i></a>
-                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="instagram" class="h-5 w-5"></i></a>
-                  <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
                 </div>
-              </div>
-    
-              <!-- Links -->
-              <div>
-                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
-                <ul class="space-y-3 text-sm">
-                  <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-                  <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                  <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                  <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
-                </ul>
-              </div>
-    
-              <!-- Services -->
-              <div>
-                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Services</h4>
-                <ul class="space-y-3 text-sm">
-                  <li><a href="#" class="hover:text-white transition-colors">Residential Roofing</a></li>
-                  <li><a href="#" class="hover:text-white transition-colors">Commercial Roofing</a></li>
-                  <li><a href="#" class="hover:text-white transition-colors">Storm Repair</a></li>
-                  <li><a href="#" class="hover:text-white transition-colors">Gutters & Siding</a></li>
-                </ul>
-              </div>
-    
-              <!-- Newsletter -->
-              <div>
-                <h4 class="text-white font-bold uppercase tracking-wider mb-6">Stay Informed</h4>
-                <p class="text-sm mb-4">Subscribe for maintenance tips and seasonal alerts.</p>
-                <div class="flex">
-                  <input type="email" placeholder="Email Address" class="bg-slate-900 border border-slate-800 text-white px-4 py-2 rounded-l-md outline-none focus:border-blue-600 w-full" />
-                  <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors">
-                    Go
-                  </button>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Residential Roofing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Commercial Roofing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Storm Repair</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Gutters & Siding</a></li>
+                    </ul>
                 </div>
-              </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Stay Informed</h4>
+                    <p class="text-sm mb-4">Subscribe for maintenance tips and seasonal alerts.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email Address"
+                            class="bg-slate-900 border border-slate-800 text-white px-4 py-2 rounded-l-md outline-none focus:border-blue-600 w-full" />
+                        <button
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors">
+                            Go
+                        </button>
+                    </div>
+                </div>
             </div>
-    
+
             <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-              <p>&copy; 2024 Mil-Spec Roofing & Construction. All rights reserved.</p>
-              <p class="mt-2 md:mt-0">Built for precision.</p>
+                <p>&copy; 2024 Mil-Spec Roofing & Construction. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Built for precision.</p>
             </div>
         </div>
     </footer>
@@ -524,26 +669,31 @@
     <!-- Service Modal (Hidden by default) -->
     <div id="service-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
         <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" id="close-modal-overlay"></div>
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative z-10 animate-fade-in">
-             <div id="service-modal-content"></div>
+        <div
+            class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative z-10 animate-fade-in">
+            <div id="service-modal-content"></div>
         </div>
     </div>
 
     <!-- Gallery Lightbox (Hidden by default) -->
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/95 backdrop-blur-md">
-        <button id="close-lightbox" class="absolute top-6 right-6 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors z-50">
+    <div id="lightbox"
+        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/95 backdrop-blur-md">
+        <button id="close-lightbox"
+            class="absolute top-6 right-6 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors z-50">
             <i data-lucide="x" class="h-8 w-8"></i>
         </button>
         <div class="relative w-full max-w-5xl max-h-[90vh]">
             <img id="lightbox-img" src="" class="w-full h-full max-h-[85vh] object-contain rounded-lg shadow-2xl" />
-            <div class="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white text-center rounded-b-lg backdrop-blur-sm">
+            <div
+                class="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white text-center rounded-b-lg backdrop-blur-sm">
                 <h3 id="lightbox-caption" class="text-xl font-bold"></h3>
             </div>
         </div>
     </div>
 
     <!-- Sticky CTA Button -->
-    <a href="index.html#contact" class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group">
+    <a href="index.html#contact"
+        class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group">
         <i data-lucide="clipboard-check" class="h-6 w-6 group-hover:animate-pulse"></i>
         <span class="hidden md:inline">Get Free Estimate</span>
         <span class="md:hidden">Estimate</span>
@@ -552,4 +702,5 @@
     <!-- Main Logic Script -->
     <script src="script.js" defer></script>
 </body>
+
 </html>

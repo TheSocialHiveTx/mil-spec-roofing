@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | Mil-Spec Roofing & Construction</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-slate-50 font-sans text-slate-900">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center cursor-pointer group">
+                <div class="flex flex-col items-center">
+                    <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="h-12 w-auto">
+                        <path d="M20 50 L80 10" stroke="#4b5563" stroke-width="6" stroke-linecap="round" />
+                        <path d="M70 25 L95 45 L140 5" stroke="#2563eb" stroke-width="6" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M130 15 L190 50" stroke="#4b5563" stroke-width="6" stroke-linecap="round" />
+                        <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="#1e3a8a"
+                            letter-spacing="1">MIL-SPEC</text>
+                        <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563"
+                            letter-spacing="0.5">ROOFING</text>
+                        <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14" fill="#4b5563"
+                            letter-spacing="0.5">& CONST.</text>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-6" id="desktop-menu">
+                <a href="index.html"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Home</a>
+                <a href="index.html#services"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Services</a>
+                <a href="general-construction.html"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">General
+                    Construction</a>
+                <a href="faq.html"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-blue-600 transition-colors duration-200">FAQ</a>
+                <a href="index.html#about"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">About</a>
+                <a href="index.html#gallery"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Gallery</a>
+                <a href="index.html#contact"
+                    class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Contact</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hidden lg:block">
+                <a href="index.html#contact"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
+                    Get Estimate
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="lg:hidden">
+                <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none">
+                    <i data-lucide="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
+            <div class="flex flex-col p-4 space-y-4">
+                <a href="index.html"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Home</a>
+                <a href="index.html#services"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Services</a>
+                <a href="general-construction.html"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">General
+                    Construction</a>
+                <a href="faq.html"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-blue-600">FAQ</a>
+                <a href="index.html#about"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">About</a>
+                <a href="index.html#gallery"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Gallery</a>
+                <a href="index.html#contact"
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Contact</a>
+                <a href="index.html#contact"
+                    class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md">Get
+                    Free Estimate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="relative py-24 bg-slate-900 flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
+
+            <div class="relative z-10 max-w-3xl">
+                <div
+                    class="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm">
+                    <span class="text-blue-200 text-xs font-bold uppercase tracking-widest">Knowledge Base</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+                    Frequently Asked <span class="text-blue-500">Questions</span>
+                </h1>
+                <p class="text-lg text-slate-300">
+                    Briefings on our operations, services, and standards. If you don't see your question here, contact
+                    HQ directly.
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQ Content -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="space-y-4">
+
+                    <!-- Q1 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>What roofing services does MilSpec Roofing provide in Southeast Texas?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            MilSpec Roofing provides residential and commercial roofing services across Southeast Texas,
+                            including roof inspections, repairs, full roof replacements, storm and hurricane damage
+                            repairs, and preventative maintenance.
+                        </div>
+                    </details>
+
+                    <!-- Q2 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>Do you work on both residential and commercial properties?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            Yes. MilSpec Roofing handles both residential and commercial roofing projects, from
+                            single-family homes to offices, warehouses, and multi-building properties.
+                        </div>
+                    </details>
+
+                    <!-- Q3 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>What areas of Southeast Texas do you serve?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            We serve Southeast Texas and surrounding communities. If you are unsure whether your
+                            property is within our service area, contact us to confirm availability.
+                        </div>
+                    </details>
+
+                    <!-- Q4 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>Do you offer free roof inspections?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            Yes. We offer free roof inspections to identify damage, assess roof condition, and determine
+                            whether repairs or replacement are needed.
+                        </div>
+                    </details>
+
+                    <!-- Q5 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>How do I know if my roof needs repair or replacement?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            Minor, localized damage can often be repaired. Widespread damage, recurring leaks, storm
+                            impact, or an aging roof may require replacement. A professional inspection is the best way
+                            to determine the right solution.
+                        </div>
+                    </details>
+
+                    <!-- Q6 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>Do you handle storm, wind, and hurricane damage?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            Yes. We specialize in storm-related roof damage common in Southeast Texas, including wind,
+                            hail, and hurricane impacts. We recommend inspections after any major weather event.
+                        </div>
+                    </details>
+
+                    <!-- Q7 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>Can MilSpec Roofing help with insurance claims?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            Yes. We assist homeowners and property managers throughout the insurance process by
+                            documenting damage and working alongside adjusters to ensure repairs align with approved
+                            claims.
+                        </div>
+                    </details>
+
+                    <!-- Q8 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>What roofing materials do you install?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            We install durable, manufacturer-approved roofing materials selected for performance in
+                            Southeast Texas weather conditions. Material options are reviewed during the inspection
+                            process.
+                        </div>
+                    </details>
+
+                    <!-- Q9 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>Do you install impact-resistant or hurricane-rated roofing systems?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            Yes. We offer impact-resistant and high-wind-rated roofing systems designed to provide added
+                            protection in severe weather environments.
+                        </div>
+                    </details>
+
+                    <!-- Q10 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>Is MilSpec Roofing licensed and insured?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            Yes. MilSpec Roofing is fully licensed and insured, ensuring all work meets local codes,
+                            safety requirements, and professional standards.
+                        </div>
+                    </details>
+
+                    <!-- Q11 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>Do you offer warranties on your roofing work?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            Yes. We provide workmanship warranties along with applicable manufacturer warranties on
+                            roofing materials.
+                        </div>
+                    </details>
+
+                    <!-- Q12 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>Do you offer military discounts?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            Yes. We proudly offer military discounts for active-duty service members, veterans, and
+                            eligible military families as a way to give back to those who have served.
+                        </div>
+                    </details>
+
+                    <!-- Q13 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>What does “MilSpec” mean in your roofing standards?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            “MilSpec” reflects our commitment to disciplined processes, high-quality materials, precise
+                            installation, and attention to detail—modeled after military-grade standards of reliability
+                            and accountability.
+                        </div>
+                    </details>
+
+                    <!-- Q14 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>What sets MilSpec Roofing apart from other roofing companies?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            We combine military-inspired discipline, local Southeast Texas expertise, and a commitment
+                            to clear communication, quality workmanship, and dependable service on every project.
+                        </div>
+                    </details>
+
+                    <!-- Q15 -->
+                    <details
+                        class="group bg-slate-50 rounded-lg border border-slate-200 open:border-blue-500 open:shadow-md transition-all duration-300">
+                        <summary
+                            class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg text-slate-900 list-none select-none">
+                            <span>How do I schedule a roof inspection?</span>
+                            <span
+                                class="transform group-open:rotate-180 transition-transform duration-300 text-blue-600">
+                                <i data-lucide="chevron-down" class="h-5 w-5"></i>
+                            </span>
+                        </summary>
+                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100/50 pt-4 mt-2">
+                            You can schedule a free roof inspection by contacting us directly through our website or by
+                            phone. Our team will coordinate a time that works for you.
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-blue-600 text-white text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-4">Still Have Questions?</h2>
+                <p class="text-blue-100 mb-8 max-w-2xl mx-auto">Our team is standing by to provide a detailed briefing
+                    on your specific situation.</p>
+                <a href="index.html#contact"
+                    class="bg-white text-blue-600 hover:bg-slate-100 px-8 py-4 rounded-sm font-bold uppercase tracking-wider transition-colors inline-block">
+                    Contact HQ
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <svg width="240" height="60" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-auto opacity-90">
+                            <path d="M20 50 L80 10" stroke="white" stroke-width="6" stroke-linecap="round" />
+                            <path d="M70 25 L95 45 L140 5" stroke="#3b82f6" stroke-width="6" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M130 15 L190 50" stroke="white" stroke-width="6" stroke-linecap="round" />
+                            <text x="10" y="75" font-family="sans-serif" font-weight="900" font-size="42" fill="white"
+                                letter-spacing="1">MIL-SPEC</text>
+                            <text x="205" y="55" font-family="sans-serif" font-weight="700" font-size="14"
+                                fill="#94a3b8" letter-spacing="0.5">ROOFING</text>
+                            <text x="205" y="72" font-family="sans-serif" font-weight="700" font-size="14"
+                                fill="#94a3b8" letter-spacing="0.5">& CONST.</text>
+                        </svg>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Dedicated to providing military-grade roofing solutions with precision, integrity, and unmatched
+                        durability.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="facebook"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="twitter"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="instagram"
+                                class="h-5 w-5"></i></a>
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="linkedin"
+                                class="h-5 w-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition-colors text-blue-500">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Roofing</a></li>
+                        <li><a href="general-construction.html" class="hover:text-white transition-colors">General
+                                Construction</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">Storm Repair</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Stay Informed</h4>
+                    <p class="text-sm mb-4">Subscribe for maintenance tips and seasonal alerts.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email Address"
+                            class="bg-slate-900 border border-slate-800 text-white px-4 py-2 rounded-l-md outline-none focus:border-blue-600 w-full" />
+                        <button
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors">
+                            Go
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2024 Mil-Spec Roofing & Construction. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Built for precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Logic Script -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
