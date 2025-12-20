@@ -196,15 +196,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Testimonials Carousel ---
+   // --- 1. Testimonials Data (This was missing!) ---
+    const testimonials = [
+      { 
+        name: "Michael R.", 
+        role: "Homeowner", 
+        content: "The level of discipline this crew showed was incredible. They arrived at 0700 sharp, worked efficiently, and left my yard cleaner than they found it. The roof looks amazing.", 
+        rating: 5 
+      },
+      { 
+        name: "Sarah Jenkins", 
+        role: "Property Manager", 
+        content: "I manage 15 commercial properties. Mil-Spec is the only team I trust. Their reports are detailed, their pricing is transparent, and their work holds up to Texas storms.", 
+        rating: 5 
+      },
+      { 
+        name: "David Chen", 
+        role: "Business Owner", 
+        content: "We had a massive leak during the spring rains. Their rapid response team was onsite within 2 hours. They tarped it, quoted it, and fixed it within the week.", 
+        rating: 5 
+      }
+    ];
+
+    // --- 2. Testimonials Logic ---
     const testimonialContent = document.getElementById('testimonial-content');
     if (testimonialContent) {
         let currentTestimonial = 0;
 
         function updateTestimonial() {
-            const t = testimonials[currentTestimonial];
+            // This line was crashing before because 'testimonials' didn't exist
+            const t = testimonials[currentTestimonial]; 
+            
+            // Create stars
             const stars = Array(t.rating).fill('<i data-lucide="star" class="h-6 w-6 text-yellow-400 fill-current inline-block"></i>').join(' ');
+            
+            // Fade out
             testimonialContent.style.opacity = '0';
+            
             setTimeout(() => {
+                // Update HTML
                 testimonialContent.innerHTML = `
                     <div class="flex justify-center mb-6 space-x-1">${stars}</div>
                     <p class="text-xl md:text-2xl text-slate-700 text-center font-medium leading-relaxed italic mb-8">"${t.content}"</p>
@@ -213,11 +243,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="text-blue-600 text-sm font-semibold uppercase tracking-wide">${t.role}</p>
                     </div>
                 `;
+                
+                // Refresh icons and fade in
                 if (typeof lucide !== 'undefined') lucide.createIcons();
                 testimonialContent.style.opacity = '1';
             }, 200);
         }
 
+        // Button Listeners
         const nextBtn = document.getElementById('next-testimonial');
         const prevBtn = document.getElementById('prev-testimonial');
 
@@ -231,8 +264,10 @@ document.addEventListener('DOMContentLoaded', () => {
             updateTestimonial();
         };
 
+        // Initialize
         updateTestimonial();
-        // Auto advance
+
+        // Auto advance every 6 seconds
         setInterval(() => {
             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
             updateTestimonial();
