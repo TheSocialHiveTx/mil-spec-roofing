@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       inspection: {
         title: 'Mil-Spec Inspection',
         icon: 'shield',
-        longDescription: "Don't wait for a leak to reveal a weakness. Our Mil-Spec 21-Point Inspection is a tactical assessment of your roof's integrity. We use drone technology and thermal imaging to detect subsurface moisture and structural anomalies that the naked eye misses. You receive a comprehensive digital report with graded priorities.",
+        longDescription: "Don't wait for a leak to reveal a weakness. Our Mil-Spec multi-point Inspection is a tactical assessment of your roof's integrity. We use drone technology and thermal imaging to detect subsurface moisture and structural anomalies that the naked eye misses. You receive a comprehensive digital report with graded priorities.",
         benefits: ["Drone Aerial Analysis", "Thermal Moisture Detection", "Detailed Photo Report", "3-5 Year Lifespan Projections"]
       },
       gutters: {
