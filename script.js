@@ -22,20 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
       repair: {
         title: 'Storm Damage Repair',
         icon: 'wrench',
-        longDescription: "When nature strikes, time is the enemy. Our Rapid Response Team creates an immediate perimeter to prevent further water intrusion. We then perform a forensic-level assessment to document all damage for insurance purposes, ensuring nothing is overlooked. From hail dents to wind-lifted shingles, we restore the integrity of your shelter.",
+        longDescription: "When nature strikes, time is the enemy. Our Rapid Response Team creates an immediate barrier to prevent further water intrusion. We then perform a forensic-level assessment to document all damage for insurance purposes, ensuring nothing is overlooked. From hail dents to wind-lifted shingles, we restore the integrity of your shelter.",
         benefits: ["24/7 Emergency Tarping", "Forensic Damage Assessment", "Insurance Adjuster Coordination", "Fast-Track Scheduling"]
       },
       inspection: {
         title: 'Mil-Spec Inspection',
         icon: 'shield',
-        longDescription: "Don't wait for a leak to reveal a weakness. Our Mil-Spec multi-point Inspection is a tactical assessment of your roof's integrity. We use drone technology and thermal imaging to detect subsurface moisture and structural anomalies that the naked eye misses. You receive a comprehensive digital report with graded priorities.",
-        benefits: ["Drone Aerial Analysis", "Thermal Moisture Detection", "Detailed Photo Report", "3-5 Year Lifespan Projections"]
+        longDescription: "Don't wait for a leak to reveal a weakness. Our Mil-Spec multi-point inspection is a tactical assessment of your roof's integrity. We use drone technology and thermal imaging to detect subsurface moisture and structural anomalies that the naked eye misses. You receive a comprehensive digital report with graded priorities.",
+        benefits: ["Drone Aerial Analysis", "Detailed Photo Report", "3-5 Year Lifespan Projections"]
       },
       gutters: {
         title: 'Gutters & Siding',
         icon: 'ruler',
         longDescription: "Water management is critical to foundation health. Our seamless gutter systems are fabricated on-site for a perfect fit, eliminating leak points. Coupled with our high-durability siding options, we harden your home's exterior envelope against wind, rain, and thermal bridging.",
-        benefits: ["Seamless Aluminum & Copper", "Leaf Guard Protection", "HardieBoard & Vinyl Siding", "Rot Repair"]
+        benefits: ["Seamless Aluminum Gutters", "Leaf Guard Protection", "HardieBoard & Vinyl Siding", "Rot Repair"]
       },
       insurance: {
         title: 'Insurance Claims',
