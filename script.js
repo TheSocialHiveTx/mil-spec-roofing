@@ -243,8 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
         const counters = [
-            { id: 'counter-years', end: 18 },
-            { id: 'counter-missions', end: 2540, suffix: '' },
+            { id: 'counter-years', end: 10},
+            { id: 'counter-missions', end: 250+, suffix: '' },
             { id: 'counter-satisfaction', end: 100, suffix: '%' }
         ];
         let countersStarted = false;
