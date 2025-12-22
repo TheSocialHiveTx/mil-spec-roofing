@@ -6,29 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>General Construction | Mil-Spec Roofing</title>
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="bg-slate-50 font-sans text-slate-900">
 
+    <!-- Navbar -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center cursor-pointer group">
-                <div class="flex flex-col items-center">
-                    <img 
-                        src="images/mil-spec roofing logo.png" 
-                        alt="Mil-Spec Roofing & Construction Logo" 
-                        class="h-12 w-auto"
-                    >
-                </div>
-            </a>
+            <!-- Logo -->
+<a href="index.html" class="flex items-center cursor-pointer group">
+    <div class="flex flex-col items-center">
+        <img 
+            src="images/mil-spec roofing logo.png" 
+            alt="Mil-Spec Roofing & Construction Logo" 
+            class="h-12 w-auto"
+        >
+    </div>
+</a></a>
 
+            <!-- Desktop Menu -->
             <div class="hidden lg:flex space-x-6" id="desktop-menu">
                 <a href="index.html"
                     class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Home</a>
@@ -47,6 +54,7 @@
                     class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Contact</a>
             </div>
 
+            <!-- CTA Button -->
             <div class="hidden lg:block">
                 <a href="index.html#contact"
                     class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
@@ -54,6 +62,7 @@
                 </a>
             </div>
 
+            <!-- Mobile Menu Toggle -->
             <div class="lg:hidden">
                 <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none">
                     <i data-lucide="menu" class="h-6 w-6"></i>
@@ -61,6 +70,7 @@
             </div>
         </div>
 
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu"
             class="hidden lg:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
             <div class="flex flex-col p-4 space-y-4">
@@ -86,8 +96,10 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
     <main>
-        <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-slate-900 pt-24 md:pt-32">
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-slate-900">
             <div class="absolute inset-0 z-0">
                 <img src="https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg"
                     class="w-full h-full object-cover opacity-30" alt="Construction Site" />
@@ -121,8 +133,10 @@
             </div>
         </section>
 
+        <!-- Construction Services Section -->
         <section class="py-24 bg-white">
             <div class="container mx-auto px-4">
+                <!-- Residential -->
                 <div class="mb-20">
                     <div class="flex items-center mb-12">
                         <div class="bg-blue-100 p-3 rounded-lg mr-4 text-blue-600"><i data-lucide="home"
@@ -177,6 +191,7 @@
                     </div>
                 </div>
 
+                <!-- Commercial -->
                 <div>
                     <div class="flex items-center mb-12">
                         <div class="bg-slate-100 p-3 rounded-lg mr-4 text-slate-700"><i data-lucide="building"
@@ -220,6 +235,7 @@
             </div>
         </section>
 
+        <!-- CTA Section -->
         <section class="py-16 bg-blue-600 text-white text-center">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-4">Ready to Break Ground?</h2>
@@ -233,6 +249,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
