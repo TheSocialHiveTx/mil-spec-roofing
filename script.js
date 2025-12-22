@@ -47,12 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 3. Data: Gallery Images ---
     const galleryImages = [
-        { title: 'Modern Estate Replacement', type: 'Residential', img: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-        { title: 'Commercial Complex', type: 'Commercial', img: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-        { title: 'Suburban Storm Repair', type: 'Repair', img: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-        { title: 'Luxury Metal Seam', type: 'Specialty', img: 'https://images.pexels.com/photos/259950/pexels-photo-259950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-        { title: 'Historic Restoration', type: 'Restoration', img: 'https://images.pexels.com/photos/209296/pexels-photo-209296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-        { title: 'Industrial Flat Roof', type: 'Commercial', img: 'https://images.pexels.com/photos/176342/pexels-photo-176342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' }
+        { title: 'Modern Estate Replacement', type: 'Residential', img: 'images/Mil-Spec Roofing Modern Estate.jpg' }, 
+        { title: 'Commercial Complex', type: 'Commercial', img: 'images/Mil-Spec Roofing Commercial Complex.jpg' },
+        { title: 'Suburban Storm Repair', type: 'Repair', img: 'images/Mil-Spec Roofing Suburban Storm Repair.jpg' },
+        { title: 'Luxury Metal Seam', type: 'Specialty', img: 'images/Mil-Spec Roofing Metal Roofing.jpg' },
+        { title: 'Community Support', type: 'Restoration', img: 'images/Mil-Spec Roofing Community Support.jpg' },
+        { title: 'Industrial Flat Roof', type: 'Commercial', img: 'images/Mil-Spec Roofing Commercail Flat Roof.jpg' }
     ];
 
     // --- 4. Data: Testimonials ---
