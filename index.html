@@ -10,90 +10,19 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        /* Custom Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-
-        /* Cinematic Hero Zoom Animation */
-        @keyframes slowZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.1); }
-        }
-
-        .hero-bg-animate {
-            animation: slowZoom 20s infinite alternate linear;
-        }
-
-        /* Mobile Menu Transitions */
-        #mobile-menu {
-            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-        }
-
-        #mobile-menu.active {
-            max-height: 500px;
-            opacity: 1;
-        }
-
-        /* Navbar Scrolled State */
-        nav.scrolled {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem;
-            background-color: rgba(255, 255, 255, 0.95);
-        }
-
-        /* Testimonial Fade Effect */
-        .fade-enter {
-            opacity: 0;
-            transform: translateX(20px);
-        }
-        .fade-enter-active {
-            opacity: 1;
-            transform: translateX(0);
-            transition: opacity 300ms, transform 300ms;
-        }
-        .fade-exit {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .fade-exit-active {
-            opacity: 0;
-            transform: translateX(-20px);
-            transition: opacity 300ms, transform 300ms;
-        }
-    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+        "react": "https://esm.sh/react@^19.2.3",
+        "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+        "react/": "https://esm.sh/react@^19.2.3/"
+      }
+    }
+    </script>
 </head>
 
 <body class="bg-slate-50 font-sans text-slate-900">
@@ -101,7 +30,7 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center cursor-pointer group">
-                <div class="flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                <div class="flex flex-col items-center">
                     <img src="images/mil-spec roofing logo.png" 
                          alt="Mil-Spec Roofing Logo" 
                          class="h-12 w-auto object-contain" />
@@ -128,13 +57,13 @@
 
             <div class="hidden lg:block">
                 <a href="index.html#contact"
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg hover:shadow-blue-500/30">
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
                     Get Estimate
                 </a>
             </div>
 
             <div class="lg:hidden">
-                <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none hover:text-blue-600 transition-colors">
+                <button id="mobile-menu-btn" class="text-slate-800 focus:outline-none">
                     <i data-lucide="menu" class="h-6 w-6"></i>
                 </button>
             </div>
@@ -144,22 +73,22 @@
             class="hidden lg:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
             <div class="flex flex-col p-4 space-y-4">
                 <a href="index.html"
-                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-600 pl-2 border-l-4 border-transparent hover:border-blue-600 transition-all">Home</a>
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Home</a>
                 <a href="index.html#services"
-                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-600 pl-2 border-l-4 border-transparent hover:border-blue-600 transition-all">Services</a>
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Services</a>
                 <a href="general-construction.html"
-                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-600 pl-2 border-l-4 border-transparent hover:border-blue-600 transition-all">General
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">General
                     Construction</a>
                 <a href="faq.html"
-                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-600 pl-2 border-l-4 border-transparent hover:border-blue-600 transition-all">FAQ</a>
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">FAQ</a>
                 <a href="index.html#about"
-                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-600 pl-2 border-l-4 border-transparent hover:border-blue-600 transition-all">About</a>
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">About</a>
                 <a href="index.html#gallery"
-                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-600 pl-2 border-l-4 border-transparent hover:border-blue-600 transition-all">Gallery</a>
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Gallery</a>
                 <a href="index.html#contact"
-                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-600 pl-2 border-l-4 border-transparent hover:border-blue-600 transition-all">Contact</a>
+                    class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Contact</a>
                 <a href="index.html#contact"
-                    class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md active:scale-95 transition-transform">Get
+                    class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md">Get
                     Free Estimate</a>
             </div>
         </div>
@@ -170,7 +99,7 @@
             <div class="absolute inset-0 z-0">
                 <img src="images/mil-specroof5.JPG" 
                      alt="Mil-Spec Roofing Project" 
-                     class="w-full h-full object-cover hero-bg-animate" />
+                     class="w-full h-full object-cover" />
                 
                 <div
                     class="absolute inset-0 bg-slate-900/60 bg-gradient-to-t from-slate-900 via-slate-900/50 to-slate-900/30">
@@ -179,14 +108,14 @@
 
             <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center pt-28 md:pt-20">
                 <div class="w-full md:w-2/3 text-white text-center md:text-left">
-                    <div data-aos="fade-down" data-aos-duration="800"
+                    <div
                         class="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm">
                         <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
                         <span class="text-blue-200 text-xs font-bold uppercase tracking-widest">Veteran Owned &
                             Operated</span>
                     </div>
 
-                    <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-xl">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 drop-shadow-xl">
                         Military Grade <br />
                         <span
                             class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 filter drop-shadow-lg">
@@ -194,33 +123,33 @@
                         </span>
                     </h1>
 
-                    <div class="mb-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-6">
                         <p class="text-xl md:text-2xl font-serif italic text-blue-200 tracking-wide">
                             "Service to Country, Service to Community"
                         </p>
                     </div>
 
-                    <p data-aos="fade-up" data-aos-delay="600"
+                    <p
                         class="text-lg md:text-xl text-slate-100 mb-8 max-w-2xl mx-auto md:mx-0 leading-relaxed drop-shadow-md">
                         We bring the precision, integrity, and durability of military specifications to your home.
                         Protect your biggest investment with Mil-Spec Roofing.
                     </p>
 
-                    <div data-aos="fade-up" data-aos-delay="800"
+                    <div
                         class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                         <a href="#contact"
-                            class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider flex items-center justify-center transition-all shadow-lg hover:shadow-blue-500/25 group backdrop-blur-sm hover:-translate-y-1">
+                            class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider flex items-center justify-center transition-all shadow-lg hover:shadow-blue-500/25 group backdrop-blur-sm">
                             Get Free Quote
                             <i data-lucide="arrow-right"
                                 class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
                         </a>
                         <a href="#services"
-                            class="w-full sm:w-auto bg-white/10 border-2 border-white/80 hover:bg-white hover:text-slate-900 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider transition-all backdrop-blur-sm text-center hover:-translate-y-1">
+                            class="w-full sm:w-auto bg-white/10 border-2 border-white/80 hover:bg-white hover:text-slate-900 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider transition-all backdrop-blur-sm text-center">
                             Our Services
                         </a>
                     </div>
 
-                    <div data-aos="fade-in" data-aos-delay="1000"
+                    <div
                         class="mt-12 flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 text-sm font-semibold text-slate-200 drop-shadow-md">
                         <div class="flex items-center space-x-2">
                             <i data-lucide="check-circle" class="text-blue-500 h-5 w-5"></i>
@@ -238,7 +167,7 @@
 
         <section id="services" class="py-24 bg-white relative">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-16" data-aos="fade-up">
+                <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 uppercase tracking-tight">
                         Mission-Ready <span class="text-blue-600">Services</span>
                     </h2>
@@ -251,10 +180,10 @@
 
                 <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full hover:-translate-y-2"
-                        data-aos="fade-up" data-aos-delay="100" data-id="residential">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="residential">
                         <div
-                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="home" class="h-8 w-8"></i>
                         </div>
                         <h3
@@ -272,10 +201,10 @@
                         </div>
                     </div>
 
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full hover:-translate-y-2"
-                        data-aos="fade-up" data-aos-delay="200" data-id="commercial">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="commercial">
                         <div
-                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="hard-hat" class="h-8 w-8"></i>
                         </div>
                         <h3
@@ -292,10 +221,10 @@
                         </div>
                     </div>
 
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full hover:-translate-y-2"
-                        data-aos="fade-up" data-aos-delay="300" data-id="repair">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="repair">
                         <div
-                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="wrench" class="h-8 w-8"></i>
                         </div>
                         <h3
@@ -312,10 +241,10 @@
                         </div>
                     </div>
 
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full hover:-translate-y-2"
-                        data-aos="fade-up" data-aos-delay="400" data-id="inspection">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="inspection">
                         <div
-                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="shield" class="h-8 w-8"></i>
                         </div>
                         <h3
@@ -332,10 +261,10 @@
                         </div>
                     </div>
 
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full hover:-translate-y-2"
-                        data-aos="fade-up" data-aos-delay="500" data-id="gutters">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="gutters">
                         <div
-                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="ruler" class="h-8 w-8"></i>
                         </div>
                         <h3
@@ -352,10 +281,10 @@
                         </div>
                     </div>
 
-                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full hover:-translate-y-2"
-                        data-aos="fade-up" data-aos-delay="600" data-id="insurance">
+                    <div class="service-card group bg-slate-50 p-8 rounded-lg border border-slate-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer flex flex-col h-full"
+                        data-id="insurance">
                         <div
-                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                            class="mb-6 inline-block p-4 bg-white rounded-xl shadow-sm text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 w-16 h-16 flex items-center justify-center relative z-10">
                             <i data-lucide="umbrella" class="h-8 w-8"></i>
                         </div>
                         <h3
@@ -376,13 +305,13 @@
         </section>
 
         <section id="about" class="py-24 bg-slate-900 text-white relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -mr-32 -mt-32 animate-pulse"></div>
-            <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -ml-32 -mb-32 animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
 
             <div class="container mx-auto px-4 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-16">
 
-                    <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="lg:w-1/2">
                         <h2 class="text-3xl md:text-4xl font-extrabold mb-6 uppercase tracking-tight">
                             The <span class="text-blue-500">Mil-Spec</span> Difference
                         </h2>
@@ -394,7 +323,7 @@
                         </p>
 
                         <ul class="space-y-4 mb-8">
-                            <li class="flex items-start" data-aos="fade-up" data-aos-delay="100">
+                            <li class="flex items-start">
                                 <div
                                     class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
                                     <span class="text-xs font-bold">1</span>
@@ -405,7 +334,7 @@
                                         weather conditions.</p>
                                 </div>
                             </li>
-                            <li class="flex items-start" data-aos="fade-up" data-aos-delay="200">
+                            <li class="flex items-start">
                                 <div
                                     class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
                                     <span class="text-xs font-bold">2</span>
@@ -416,7 +345,7 @@
                                         excuses.</p>
                                 </div>
                             </li>
-                            <li class="flex items-start" data-aos="fade-up" data-aos-delay="300">
+                            <li class="flex items-start">
                                 <div
                                     class="flex-shrink-0 h-6 w-6 rounded-full bg-blue-600 flex items-center justify-center mt-1">
                                     <span class="text-xs font-bold">3</span>
@@ -430,17 +359,16 @@
                         </ul>
                     </div>
 
-                    <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                         <div
-                            class="sm:col-span-2 bg-gradient-to-br from-slate-800 to-slate-800/50 p-8 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors duration-300 shadow-xl group relative overflow-hidden transform hover:-translate-y-1">
+                            class="sm:col-span-2 bg-gradient-to-br from-slate-800 to-slate-800/50 p-8 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors duration-300 shadow-xl group relative overflow-hidden">
                             <div
                                 class="absolute top-0 left-0 w-1 h-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div>
                             <div class="flex flex-col sm:flex-row items-center sm:items-baseline justify-center gap-2">
-                                <span id="counter-years" data-target="10"
-                                    class="counter block text-5xl md:text-6xl font-extrabold text-white mb-2 font-mono tracking-tighter">0</span>
-                                <span class="text-3xl font-bold text-blue-500">+</span>
+                                <span id="counter-years"
+                                    class="block text-5xl md:text-6xl font-extrabold text-white mb-2 font-mono tracking-tighter">10+</span>
                             </div>
                             <span
                                 class="block text-center text-sm md:text-base uppercase tracking-widest text-blue-400 font-bold">
@@ -449,12 +377,12 @@
                         </div>
 
                         <div
-                            class="bg-gradient-to-br from-slate-800 to-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors duration-300 shadow-xl group relative overflow-hidden transform hover:-translate-y-1">
+                            class="bg-gradient-to-br from-slate-800 to-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors duration-300 shadow-xl group relative overflow-hidden">
                             <div
                                 class="absolute top-0 left-0 w-1 h-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div>
-                            <span id="counter-missions" data-target="250"
-                                class="counter block text-4xl md:text-5xl font-extrabold text-white mb-2 font-mono text-center">0</span>
+                            <span id="counter-missions"
+                                class="block text-4xl md:text-5xl font-extrabold text-white mb-2 font-mono text-center">250+</span>
                             <span
                                 class="block text-center text-xs md:text-sm uppercase tracking-wider text-slate-400 font-bold group-hover:text-blue-400 transition-colors">
                                 Missions Complete
@@ -462,15 +390,12 @@
                         </div>
 
                         <div
-                            class="bg-gradient-to-br from-slate-800 to-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors duration-300 shadow-xl group relative overflow-hidden transform hover:-translate-y-1">
+                            class="bg-gradient-to-br from-slate-800 to-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors duration-300 shadow-xl group relative overflow-hidden">
                             <div
                                 class="absolute top-0 left-0 w-1 h-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             </div>
-                            <div class="flex justify-center items-baseline">
-                                <span id="counter-satisfaction" data-target="100"
-                                    class="counter block text-4xl md:text-5xl font-extrabold text-white mb-2 font-mono text-center">0</span>
-                                <span class="text-xl font-bold text-white">%</span>
-                            </div>
+                            <span id="counter-satisfaction"
+                                class="block text-4xl md:text-5xl font-extrabold text-white mb-2 font-mono text-center">100%</span>
                             <span
                                 class="block text-center text-xs md:text-sm uppercase tracking-wider text-slate-400 font-bold group-hover:text-blue-400 transition-colors">
                                 Satisfaction Rate
@@ -485,7 +410,7 @@
         <section id="gallery" class="py-24 bg-slate-50">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                    <div class="mb-6 md:mb-0" data-aos="fade-right">
+                    <div class="mb-6 md:mb-0">
                         <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 uppercase tracking-tight">
                             Recent <span class="text-blue-600">Operations</span>
                         </h2>
@@ -494,42 +419,42 @@
                     <a href="https://companycam-attachments-prod-us-east-1.s3.amazonaws.com/1yt5z1frtgwzoqsoxc80le503h9j"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="text-blue-600 font-bold uppercase tracking-wider hover:text-blue-800 transition-colors hover:underline">
+                        class="text-blue-600 font-bold uppercase tracking-wider hover:text-blue-800 transition-colors">
                         View Full Portfolio →
                     </a>
                 </div>
 
                 <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    </div>
+                </div>
             </div>
         </section>
 
         <section class="py-24 bg-white relative">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-16" data-aos="fade-up">
+                <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 uppercase tracking-tight">
                         After Action <span class="text-blue-600">Reports</span>
                     </h2>
                     <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full mb-6"></div>
                 </div>
 
-                <div class="max-w-4xl mx-auto relative" data-aos="zoom-in">
+                <div class="max-w-4xl mx-auto relative">
                     <div
                         class="bg-slate-50 border border-slate-100 rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden min-h-[350px] flex flex-col justify-center">
                         <div class="absolute top-8 left-8 text-blue-100 transform rotate-180 pointer-events-none">
                             <i data-lucide="quote" class="h-24 w-24"></i>
                         </div>
 
-                        <div id="testimonial-content" class="relative z-10">
-                             </div>
+                        <div id="testimonial-content" class="relative z-10 transition-opacity duration-500 ease-in-out">
+                            </div>
 
                         <div class="flex justify-center gap-4 mt-8 z-20">
                             <button id="prev-testimonial"
-                                class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105 active:scale-95">
+                                class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105">
                                 <i data-lucide="arrow-left" class="h-5 w-5"></i>
                             </button>
                             <button id="next-testimonial"
-                                class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105 active:scale-95">
+                                class="bg-white hover:bg-slate-100 text-slate-600 hover:text-blue-600 border border-slate-200 p-2 rounded-full shadow-sm transition-all hover:scale-105">
                                 <i data-lucide="arrow-right" class="h-5 w-5"></i>
                             </button>
                         </div>
@@ -540,7 +465,7 @@
 
         <section id="contact" class="py-24 bg-white relative">
             <div class="container mx-auto px-4">
-                <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100" data-aos="fade-up" data-aos-offset="300">
+                <div class="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
                     
                     <div class="lg:w-1/3 bg-slate-900 p-12 text-white flex flex-col justify-between">
                         <div>
@@ -548,23 +473,23 @@
                             <p class="text-slate-400 mb-8">Ready to secure your roof? Deploy our team today.</p>
 
                             <div class="space-y-6">
-                                <div class="flex items-start space-x-4 group">
-                                    <i data-lucide="phone" class="text-blue-500 h-6 w-6 mt-1 group-hover:scale-110 transition-transform"></i>
+                                <div class="flex items-start space-x-4">
+                                    <i data-lucide="phone" class="text-blue-500 h-6 w-6 mt-1"></i>
                                     <div>
                                         <h3 class="font-semibold">Phone</h3>
-                                        <p class="text-slate-300 hover:text-white transition-colors">281-813-5925</p>
+                                        <p class="text-slate-300">281-813-5925</p>
                                         <p class="text-slate-500 text-sm">Mon-Fri 0800-1800</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start space-x-4 group">
-                                    <i data-lucide="mail" class="text-blue-500 h-6 w-6 mt-1 group-hover:scale-110 transition-transform"></i>
+                                <div class="flex items-start space-x-4">
+                                    <i data-lucide="mail" class="text-blue-500 h-6 w-6 mt-1"></i>
                                     <div>
                                         <h3 class="font-semibold">Email</h3>
-                                        <p class="text-slate-300 hover:text-white transition-colors">info@mil-specroofing.com</p>
+                                        <p class="text-slate-300">info@mil-specroofing.com</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start space-x-4 group">
-                                    <i data-lucide="map-pin" class="text-blue-500 h-6 w-6 mt-1 group-hover:scale-110 transition-transform"></i>
+                                <div class="flex items-start space-x-4">
+                                    <i data-lucide="map-pin" class="text-blue-500 h-6 w-6 mt-1"></i>
                                     <div>
                                         <h3 class="font-semibold">Base of Operations</h3>
                                         <p class="text-slate-300">2323 Clear Lake City Blvd Unit 180<br />Houston, TX 77062</p>
@@ -574,10 +499,10 @@
                         </div>
 
                         <div class="mt-12">
-                            <div class="w-full h-40 bg-slate-800 rounded-lg overflow-hidden relative shadow-inner">
+                            <div class="w-full h-40 bg-slate-800 rounded-lg overflow-hidden relative">
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.608785316263!2d-95.10166292361668!3d29.58557997515764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409c6bc0640001%3A0x6446e492215b2253!2s2323%20Clear%20Lake%20City%20Blvd%20Unit%20180%2C%20Houston%2C%20TX%2077062!5e0!3m2!1sen!2sus!4v1703178000000!5m2!1sen!2sus" 
-                                    class="w-full h-full grayscale hover:grayscale-0 transition-all duration-500" 
+                                    class="w-full h-full" 
                                     style="border:0;" 
                                     allowfullscreen="" 
                                     loading="lazy" 
@@ -639,7 +564,7 @@
                                     placeholder="Describe your project needs..."></textarea>
                             </div>
                             <button
-                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-md uppercase tracking-wider shadow-lg hover:shadow-blue-500/30 transition-all transform hover:-translate-y-1">
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-md uppercase tracking-wider shadow-lg hover:shadow-blue-500/30 transition-all">
                                 Send Request
                             </button>
                         </form>
@@ -664,13 +589,13 @@
                         durability.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="hover:text-blue-500 transition-colors transform hover:scale-110"><i data-lucide="facebook"
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="facebook"
                                 class="h-5 w-5"></i></a>
-                        <a href="#" class="hover:text-blue-500 transition-colors transform hover:scale-110"><i data-lucide="twitter"
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="twitter"
                                 class="h-5 w-5"></i></a>
-                        <a href="#" class="hover:text-blue-500 transition-colors transform hover:scale-110"><i data-lucide="instagram"
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="instagram"
                                 class="h-5 w-5"></i></a>
-                        <a href="#" class="hover:text-blue-500 transition-colors transform hover:scale-110"><i data-lucide="linkedin"
+                        <a href="#" class="hover:text-blue-500 transition-colors"><i data-lucide="linkedin"
                                 class="h-5 w-5"></i></a>
                     </div>
                 </div>
@@ -701,7 +626,7 @@
                     <p class="text-sm mb-4">Subscribe for maintenance tips and seasonal alerts.</p>
                     <div class="flex">
                         <input type="email" placeholder="Email Address"
-                            class="bg-slate-900 border border-slate-800 text-white px-4 py-2 rounded-l-md outline-none focus:border-blue-600 w-full transition-colors" />
+                            class="bg-slate-900 border border-slate-800 text-white px-4 py-2 rounded-l-md outline-none focus:border-blue-600 w-full" />
                         <button
                             class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md transition-colors">
                             Go
@@ -718,20 +643,20 @@
     </footer>
 
     <div id="service-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
-        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity" id="close-modal-overlay"></div>
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" id="close-modal-overlay"></div>
         <div
-            class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative z-10 animate-fade-in transform transition-all scale-100">
+            class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative z-10 animate-fade-in">
             <div id="service-modal-content"></div>
         </div>
     </div>
 
     <div id="lightbox"
-        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/95 backdrop-blur-md transition-all duration-300 opacity-0">
+        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-950/95 backdrop-blur-md">
         <button id="close-lightbox"
             class="absolute top-6 right-6 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors z-50">
             <i data-lucide="x" class="h-8 w-8"></i>
         </button>
-        <div class="relative w-full max-w-5xl max-h-[90vh] transform scale-95 transition-transform duration-300" id="lightbox-container">
+        <div class="relative w-full max-w-5xl max-h-[90vh]">
             <img id="lightbox-img" src="" class="w-full h-full max-h-[85vh] object-contain rounded-lg shadow-2xl" />
             <div
                 class="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white text-center rounded-b-lg backdrop-blur-sm">
@@ -741,211 +666,12 @@
     </div>
 
     <a href="index.html#contact"
-        class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full shadow-2xl transition-all transform hover:scale-110 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group hover:-translate-y-1">
+        class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group">
         <i data-lucide="clipboard-check" class="h-5 w-5 md:h-6 md:w-6 group-hover:animate-pulse"></i>
         <span class="text-xs md:text-base whitespace-nowrap">Get Free Estimate</span>
     </a>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Initialize Animate On Scroll
-        AOS.init({
-            once: true, // Animation happens only once
-            offset: 100, // Offset (in px) from the original trigger point
-            duration: 800, // Duration of animation
-            easing: 'ease-out-cubic',
-        });
-
-        // 1. Mobile Menu Toggle Logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            // Small timeout to allow the display:block to apply before animating opacity
-            if (!mobileMenu.classList.contains('hidden')) {
-                setTimeout(() => mobileMenu.classList.add('active'), 10);
-            } else {
-                mobileMenu.classList.remove('active');
-            }
-        });
-
-        // 2. Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // 3. Counter Animation Logic
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200; // The lower the slower
-
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-                    const inc = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = target;
-                        // Add plus sign if needed via CSS or logic, currently handled in HTML
-                    }
-                };
-                updateCount();
-            });
-        };
-
-        // Trigger counters when the section is visible
-        let counterSection = document.querySelector('#about');
-        let counterStarted = false;
-
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting && !counterStarted) {
-                animateCounters();
-                counterStarted = true;
-            }
-        }, { threshold: 0.5 });
-
-        observer.observe(counterSection);
-
-
-        // 4. Testimonials Logic
-        const testimonials = [
-            {
-                text: "Mil-Spec Roofing replaced my roof after a major hailstorm. Their attention to detail was incredible. They covered my pool, protected my landscaping, and the cleanup was spotless. A true military-grade operation.",
-                author: "James Peterson",
-                role: "Homeowner, Clear Lake"
-            },
-            {
-                text: "We hired them for a commercial TPO installation. The project manager kept us informed daily with drone photos and progress reports. On time and exactly on budget.",
-                author: "Sarah Jenkins",
-                role: "Property Manager"
-            },
-            {
-                text: "Honest, reliable, and professional. They inspected my roof and told me I only needed a minor repair when others tried to sell me a full replacement. That integrity is rare.",
-                author: "Mike Rodriguez",
-                role: "USAF Veteran"
-            }
-        ];
-
-        let currentTestimonial = 0;
-        const testimonialContainer = document.getElementById('testimonial-content');
-
-        function renderTestimonial(index, direction = 'next') {
-            const t = testimonials[index];
-            
-            // Fade out effect could be complex, simple replacement for now with CSS class
-            const html = `
-                <div class="fade-enter-active">
-                    <p class="text-xl md:text-2xl font-serif italic text-slate-700 leading-relaxed mb-8 relative z-10">
-                        "${t.text}"
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl">
-                            ${t.author.charAt(0)}
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-900">${t.author}</h4>
-                            <p class="text-blue-600 text-sm font-semibold uppercase tracking-wide">${t.role}</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-            testimonialContainer.innerHTML = html;
-        }
-
-        // Initial render
-        renderTestimonial(0);
-
-        document.getElementById('next-testimonial').addEventListener('click', () => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            renderTestimonial(currentTestimonial);
-        });
-
-        document.getElementById('prev-testimonial').addEventListener('click', () => {
-            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-            renderTestimonial(currentTestimonial);
-        });
-
-
-        // 5. Populate Gallery (Since HTML was empty)
-        // Using placeholder images for demo purposes to ensure layout is pretty
-        const galleryGrid = document.getElementById('gallery-grid');
-        const galleryImages = [
-            'images/mil-specroof5.JPG', 
-            'https://images.unsplash.com/photo-1632759145351-1d592919f522?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1595846519845-68e298c2edd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-        ];
-
-        // Populate the empty grid
-        if(galleryGrid.children.length === 0) {
-            galleryImages.forEach((imgSrc, index) => {
-                const div = document.createElement('div');
-                div.className = "group relative h-64 rounded-lg overflow-hidden cursor-pointer shadow-md hover:shadow-xl transition-all";
-                div.setAttribute('data-aos', 'fade-up');
-                div.setAttribute('data-aos-delay', (index * 100).toString());
-                
-                div.innerHTML = `
-                    <img src="${imgSrc}" alt="Project ${index + 1}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                    <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/40 transition-colors duration-300 flex items-center justify-center">
-                        <div class="bg-white/90 backdrop-blur-sm p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                            <i data-lucide="zoom-in" class="h-6 w-6 text-blue-600"></i>
-                        </div>
-                    </div>
-                `;
-                
-                // Lightbox Trigger
-                div.addEventListener('click', () => {
-                    const lightbox = document.getElementById('lightbox');
-                    const lbImg = document.getElementById('lightbox-img');
-                    const lbCap = document.getElementById('lightbox-caption');
-                    
-                    lbImg.src = imgSrc;
-                    lbCap.innerText = `Operation #00${index + 1}: Roofing Excellence`;
-                    
-                    lightbox.classList.remove('hidden');
-                    // Small timeout for fade in
-                    setTimeout(() => {
-                        lightbox.classList.remove('opacity-0');
-                        document.getElementById('lightbox-container').classList.remove('scale-95');
-                        document.getElementById('lightbox-container').classList.add('scale-100');
-                    }, 10);
-                });
-                
-                galleryGrid.appendChild(div);
-            });
-            // Re-run lucide for new icons
-            lucide.createIcons();
-        }
-
-        // Lightbox Close Logic
-        document.getElementById('close-lightbox').addEventListener('click', closeLightbox);
-        document.getElementById('lightbox').addEventListener('click', (e) => {
-            if(e.target.id === 'lightbox') closeLightbox();
-        });
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.add('opacity-0');
-            document.getElementById('lightbox-container').classList.add('scale-95');
-            setTimeout(() => {
-                lightbox.classList.add('hidden');
-            }, 300);
-        }
-
-    </script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
