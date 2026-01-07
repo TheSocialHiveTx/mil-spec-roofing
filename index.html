@@ -11,7 +11,14 @@
       "inLanguage": "en-US",
       "publisher": {
         "@id": "https://mil-specroofing.com/#organization"
-      }
+      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": "https://mil-specroofing.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      ]
     },
     {
       "@type": "WebPage",
@@ -26,12 +33,15 @@
         "@id": "https://mil-specroofing.com/#organization"
       },
       "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "@id": "https://mil-specroofing.com/#primaryimage",
-        "url": "https://mil-specroofing.com/images/mil-specroof5.JPG",
-        "contentUrl": "https://mil-specroofing.com/images/mil-specroof5.JPG",
-        "caption": "Mil-Spec Roofing Project"
+        "@id": "https://mil-specroofing.com/#primaryimage"
       }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://mil-specroofing.com/#primaryimage",
+      "url": "https://mil-specroofing.com/images/mil-specroof5.JPG",
+      "contentUrl": "https://mil-specroofing.com/images/mil-specroof5.JPG",
+      "caption": "Mil-Spec Roofing Project"
     },
     {
       "@type": "Organization",
@@ -40,11 +50,7 @@
       "url": "https://mil-specroofing.com/",
       "description": "Veteran-owned and operated roofing and construction company focused on precision, integrity, and durability.",
       "logo": {
-        "@type": "ImageObject",
-        "@id": "https://mil-specroofing.com/#logo",
-        "url": "https://mil-specroofing.com/images/mil-spec%20roofing%20logo.png",
-        "contentUrl": "https://mil-specroofing.com/images/mil-spec%20roofing%20logo.png",
-        "caption": "Mil-Spec Roofing Logo"
+        "@id": "https://mil-specroofing.com/#logo"
       },
       "email": "mailto:info@mil-specroofing.com",
       "telephone": "+1-281-813-5925",
@@ -56,33 +62,23 @@
         "postalCode": "77062",
         "addressCountry": "US"
       },
-      "foundingLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2323 Clear Lake City Blvd Unit 180",
-          "addressLocality": "Houston",
-          "addressRegion": "TX",
-          "postalCode": "77062",
-          "addressCountry": "US"
-        }
-      },
       "sameAs": [
         "https://www.facebook.com/MilSpecRoofing",
         "https://www.instagram.com/milspec_roofing/",
         "https://www.yelp.com/biz/mil-spec-roofing-and-construction-houston",
         "https://www.homeadvisor.com/rated.MilSpecRoofing.100009058.html",
         "https://nextdoor.com/pages/mil-spec-roofing-and-construction-houston-tx/"
-      ],
-      "subjectOf": [
-        {
-          "@type": "VideoObject",
-          "url": "https://www.youtube.com/watch?v=9H-WYl-ww1I"
-        }
       ]
     },
     {
-      "@type": "RoofingContractor",
+      "@type": "ImageObject",
+      "@id": "https://mil-specroofing.com/#logo",
+      "url": "https://mil-specroofing.com/images/mil-spec%20roofing%20logo.png",
+      "contentUrl": "https://mil-specroofing.com/images/mil-spec%20roofing%20logo.png",
+      "caption": "Mil-Spec Roofing Logo"
+    },
+    {
+      "@type": "LocalBusiness",
       "@id": "https://mil-specroofing.com/#localbusiness",
       "name": "Mil-Spec Roofing & Construction",
       "url": "https://mil-specroofing.com/",
@@ -140,17 +136,112 @@
         "Insurance claims assistance",
         "Roof inspection"
       ],
-      "sameAs": [
-        "https://www.facebook.com/MilSpecRoofing",
-        "https://www.instagram.com/milspec_roofing/",
-        "https://www.yelp.com/biz/mil-spec-roofing-and-construction-houston",
-        "https://www.homeadvisor.com/rated.MilSpecRoofing.100009058.html",
-        "https://nextdoor.com/pages/mil-spec-roofing-and-construction-houston-tx/"
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Houston"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Texas"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Mil-Spec Roofing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Roofing",
+              "serviceType": "Roof Replacement",
+              "provider": {
+                "@id": "https://mil-specroofing.com/#localbusiness"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Roofing",
+              "serviceType": "Commercial Flat Roofing",
+              "provider": {
+                "@id": "https://mil-specroofing.com/#localbusiness"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Storm Damage Repair",
+              "serviceType": "Roof Repair",
+              "provider": {
+                "@id": "https://mil-specroofing.com/#localbusiness"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mil-Spec Inspection",
+              "serviceType": "Roof Inspection",
+              "provider": {
+                "@id": "https://mil-specroofing.com/#localbusiness"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gutters & Siding",
+              "serviceType": "Exterior Services",
+              "provider": {
+                "@id": "https://mil-specroofing.com/#localbusiness"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Insurance Claims Assistance",
+              "serviceType": "Insurance Claims Support",
+              "provider": {
+                "@id": "https://mil-specroofing.com/#localbusiness"
+              }
+            }
+          }
+        ]
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+1-281-813-5925",
+          "email": "info@mil-specroofing.com",
+          "areaServed": "US",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "subjectOf": [
+        {
+          "@type": "CreativeWork",
+          "name": "Customer review video mentioning Mil-Spec Roofing",
+          "url": "https://www.youtube.com/watch?v=9H-WYl-ww1I"
+        }
       ]
     }
   ]
 }
 </script>
+
 
 <!DOCTYPE html>
 <html lang="en">
