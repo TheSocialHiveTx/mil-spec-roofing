@@ -258,23 +258,13 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script type="importmap">
-    {
-      "imports": {
-        "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
-        "react": "https://esm.sh/react@^19.2.3",
-        "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
-        "react/": "https://esm.sh/react@^19.2.3/"
-      }
-    }
-    </script>
 </head>
 
 <body class="bg-slate-50 font-sans text-slate-900">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center cursor-pointer group">
+                <a href="/" class="flex items-center cursor-pointer group">
                 <div class="flex flex-col items-center">
                     <img src="images/mil-spec roofing logo.png" 
                          alt="Mil-Spec Roofing Logo" 
@@ -283,25 +273,25 @@
             </a>
 
             <div class="hidden lg:flex space-x-6" id="desktop-menu">
-                <a href="index.html"
+                <a href="/"
                     class="nav-link text-sm font-bold uppercase tracking-wide text-blue-600 transition-colors duration-200">Home</a>
-                <a href="index.html#services"
+                <a href="/services"
                     class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Services</a>
-                <a href="general-construction.html"
+                <a href="/general-construction"
                     class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">General
                     Construction</a>
-                <a href="faq.html"
+                <a href="/faq"
                     class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">FAQ</a>
-                <a href="index.html#about"
+                <a href="/#about"
                     class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">About</a>
-                <a href="index.html#gallery"
+                <a href="/#gallery"
                     class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Gallery</a>
-                <a href="index.html#contact"
+                <a href="/#contact"
                     class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 transition-colors duration-200">Contact</a>
             </div>
 
             <div class="hidden lg:block">
-                <a href="index.html#contact"
+                <a href="#contact"
                     class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
                     Get Estimate
                 </a>
@@ -317,22 +307,22 @@
         <div id="mobile-menu"
             class="hidden lg:hidden bg-white absolute top-full left-0 w-full border-t border-slate-100 shadow-lg">
             <div class="flex flex-col p-4 space-y-4">
-                <a href="index.html"
+                <a href="/"
                     class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Home</a>
-                <a href="index.html#services"
+                <a href="/services"
                     class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Services</a>
-                <a href="general-construction.html"
+                <a href="/general-construction"
                     class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">General
                     Construction</a>
-                <a href="faq.html"
+                <a href="/faq"
                     class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">FAQ</a>
-                <a href="index.html#about"
+                <a href="/#about"
                     class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">About</a>
-                <a href="index.html#gallery"
+                <a href="/#gallery"
                     class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Gallery</a>
-                <a href="index.html#contact"
+                <a href="/#contact"
                     class="mobile-nav-link text-left text-sm font-bold uppercase tracking-wide text-slate-600">Contact</a>
-                <a href="index.html#contact"
+                <a href="#contact"
                     class="bg-blue-600 text-white px-5 py-3 rounded-sm font-bold uppercase text-center w-full shadow-md">Get
                     Free Estimate</a>
             </div>
@@ -388,7 +378,7 @@
                             <i data-lucide="arrow-right"
                                 class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
                         </a>
-                        <a href="#services"
+                        <a href="/services"
                             class="w-full sm:w-auto bg-white/10 border-2 border-white/80 hover:bg-white hover:text-slate-900 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-wider transition-all backdrop-blur-sm text-center">
                             Our Services
                         </a>
@@ -832,7 +822,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
 
                 <div>
-                    <a href="index.html" class="block mb-6">
+                    <a href="/" class="block mb-6">
                         <img src="images/mil-spec roofing logo.png" 
                              alt="Mil-Spec Roofing Logo" 
                              class="h-16 w-auto object-contain opacity-90" />
@@ -856,21 +846,20 @@
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="/#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/faq" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="/#contact" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Services</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-white transition-colors">Residential Roofing</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Commercial Roofing</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Storm Repair</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Gutters & Siding</a></li>
+                        <li><a href="/services#residential-roofing" class="hover:text-white transition-colors">Residential Roofing</a></li>
+                        <li><a href="/services#commercial-roofing" class="hover:text-white transition-colors">Commercial Roofing</a></li>
+                        <li><a href="/services#storm-damage" class="hover:text-white transition-colors">Storm Repair</a></li>
+                        <li><a href="/services#gutters-siding" class="hover:text-white transition-colors">Gutters & Siding</a></li>
+                        <li><a href="/general-construction" class="hover:text-white transition-colors">General Construction</a></li>
                     </ul>
                 </div>
 
@@ -918,7 +907,7 @@
         </div>
     </div>
 
-    <a href="index.html#contact"
+    <a href="#contact"
         class="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3 uppercase tracking-wider border-2 border-white/20 backdrop-blur-sm group">
         <i data-lucide="clipboard-check" class="h-5 w-5 md:h-6 md:w-6 group-hover:animate-pulse"></i>
         <span class="text-xs md:text-base whitespace-nowrap">Get Free Estimate</span>

@@ -1,1 +1,0 @@
-// This file is deprecated. See index.html for the static implementation.
