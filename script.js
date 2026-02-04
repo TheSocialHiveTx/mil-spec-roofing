@@ -17,9 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 4. Data: Testimonials (Keep for Carousel) ---
     const testimonials = [
-        { name: "Michael R.", role: "Homeowner", content: "The level of discipline this crew showed was incredible. They arrived at 0700 sharp, worked efficiently, and left my yard cleaner than they found it. The roof looks amazing.", rating: 5 },
-        { name: "Sarah Jenkins", role: "Property Manager", content: "I manage 15 commercial properties. Mil-Spec is the only team I trust. Their reports are detailed, their pricing is transparent, and their work holds up to Texas storms.", rating: 5 },
-        { name: "David Chen", role: "Business Owner", content: "We had a massive leak during the spring rains. Their rapid response team was onsite within 2 hours. They tarped it, quoted it, and fixed it within the week.", rating: 5 }
+        { name: "Matthew Carraway", role: "Homeowner", content: "This company is great to deal with. No pressure and honest. I knew I needed a repair or new roof resulting from storm damage, just wasn't sure of the extent. They made recommendations and presented options and didn't hound the insurance company. Ultimately installed a new roof, they did great work and didn't leave a mess.", rating: 5, date: "Mar 16, 2023" },
+        { name: "Jeff Melching", role: "Homeowner", content: "We had a great experience working with Evan Dozier. He has a great crew. They did great work and also an awesome cleanup. They did some repairs to wood trim in addition to the roof replacement. Target date was set at three weeks out and we started on the exact day targeted. Very professional from beginning to end.", rating: 5 },
+        { name: "Carrie Brantley", role: "Homeowner", content: "We love Mil-Spec Roofing & Construction! They are honest, on time, responsive and do high quality work. They have done maintenance on our roof and repairs for us. When it does come time to replace our roof, Mil-Spec will be our go to roof company.", rating: 5 },
+        { name: "Ryan Johnson", role: "Homeowner", content: "Great Veteran owned business! Very responsive and helpful. It's not just about the Money with the owner Evan he's there to help get what you need and comfortably. Helped me with an Inspection and quote for replacement for this tax appraisal year and he did it quick and in a hurry.", rating: 5 }
     ];
 
     // --- 5. Navbar Logic ---
