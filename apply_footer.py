@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/services/">
-    <link rel="canonical" href="https://mil-specroofing.com/services/">
-    <script>window.location.href = "/services/";</script>
-    <title>Redirecting...</title>
-</head>
-<body>
-    <p>Moved to <a href="/services/">/services/</a></p>
+import os
+import re
 
-
-    <!-- Footer -->
+# The Standard Footer & Floating CTA content
+FOOTER_CONTENT = """    <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div>
                     <a href="/" class="block mb-6">
                         <img src="/images/mil-spec roofing logo.png" alt="Mil-Spec Roofing Logo"
-                            class="h-16 w-auto object-contain opacity-90"  loading="lazy" />
+                            class="h-16 w-auto object-contain opacity-90" />
                     </a>
                     <p class="text-sm leading-relaxed mb-6">
                         Veteran-owned, faith-based roofing solutions built with precision, integrity, and dependable
@@ -39,7 +30,8 @@
                 <div>
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Company</h4>
                     <ul class="space-y-3 text-sm">
-<li><a href="/faq/" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="/about-us/" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/faq/" class="hover:text-white transition-colors">FAQ</a></li>
                         <li><a href="/contact-us/" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
@@ -91,6 +83,58 @@
         <i data-lucide="clipboard-check" class="h-5 w-5 md:h-6 md:w-6 group-hover:animate-pulse"></i>
         <span class="text-xs md:text-base whitespace-nowrap">Get Free Estimate</span>
     </a>
+"""
 
-</body>
-</html>
+def update_footer(filepath):
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        # Regex to find existing footer (greedy to capture everything from <footer to </footer>)
+        # We also look for the floating CTA if it exists near the footer
+        
+        # Strategy:
+        # 1. Remove existing footer if present.
+        # 2. Remove existing floating CTA if present.
+        # 3. Insert new block before <script src="/script.js"> OR </body>
+        
+        # Remove existing footer
+        content = re.sub(r'<!-- Footer.*?</footer>', '', content, flags=re.DOTALL | re.IGNORECASE)
+        content = re.sub(r'<footer.*?</footer>', '', content, flags=re.DOTALL | re.IGNORECASE)
+
+        # Remove existing floating CTA (pattern matching generic "fixed bottom-6" or similar structure or just the extraction)
+        # Being safer: Match the specific Floating CTA comment block if it exists
+        content = re.sub(r'<!-- Floating CTA.*?</a>', '', content, flags=re.DOTALL | re.IGNORECASE)
+        
+        # Clean up any multiple newlines left behind
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+
+        # Insert new footer
+        # Try to insert before the main script tag
+        if '<script src="/script.js"' in content:
+            parts = content.split('<script src="/script.js"')
+            new_content = parts[0] + "\n" + FOOTER_CONTENT + "\n    <script src=\"/script.js\"" + parts[1]
+        elif '</body>' in content:
+             parts = content.split('</body>')
+             new_content = parts[0] + "\n" + FOOTER_CONTENT + "\n</body>" + parts[1]
+        else:
+            new_content = content + "\n" + FOOTER_CONTENT
+
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        
+        print(f"Updated: {filepath}")
+
+    except Exception as e:
+        print(f"Failed to update {filepath}: {e}")
+
+root_dir = "."
+for dirpath, dirnames, filenames in os.walk(root_dir):
+    for filename in filenames:
+        if filename.endswith(".html"):
+            # Skip node_modules or .git if they exist (though not expected here)
+            if ".git" in dirpath or "node_modules" in dirpath:
+                continue
+            
+            filepath = os.path.join(dirpath, filename)
+            update_footer(filepath)
