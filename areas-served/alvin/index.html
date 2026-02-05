@@ -209,142 +209,152 @@
           <img src="/images/mil-spec roofing logo.png" alt="Mil-Spec Roofing Logo" class="h-12 w-auto" loading="lazy">
         </div>
       </a>
-      <div class="hidden lg:flex space-x-6 items-center" id="desktop-menu">
-        <a href="/"
-          class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">Home</a>
-
+            <ul class="hidden lg:flex space-x-4 xl:space-x-6 items-center flex-wrap list-none m-0 p-0" id="desktop-menu" role="menubar">
+        <li role="none">
+          <a href="/" role="menuitem"
+            class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">Home</a>
+        </li>
+        
         <!-- Services Dropdown -->
-        <div class="relative group">
-          <a href="/services/"
+        <li class="relative group" role="none">
+          <a href="/services/" role="menuitem" aria-haspopup="true" aria-expanded="false"
             class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 flex items-center gap-1 py-4">
-            Services <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            Services <i data-lucide="chevron-down" class="h-4 w-4" aria-hidden="true"></i>
           </a>
-          <div
-            class="absolute left-0 top-full pt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
-            <div
+          <ul role="menu" aria-label="Services Menu"
+            class="absolute left-0 top-full pt-2 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 list-none m-0 p-0">
+            <li role="none"
               class="bg-white shadow-xl rounded-lg border border-slate-100 overflow-hidden flex flex-col max-h-[80vh] overflow-y-auto">
-              <a href="/services/residential-roofing/"
+              <a href="/services/residential-roofing/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Residential
                 Roofing</a>
-              <a href="/services/commercial-roofing/"
+              <a href="/services/commercial-roofing/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Commercial
                 Roofing</a>
-              <a href="/services/roof-repair/"
+              <a href="/services/roof-repair/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Roof
                 Repair</a>
-              <a href="/services/roof-replacement/"
+              <a href="/services/roof-replacement/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Roof
                 Replacement</a>
-              <a href="/services/roof-installation/"
+              <a href="/services/roof-installation/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Roof
                 Installation</a>
-              <a href="/services/flat-roofing/"
+              <a href="/services/flat-roofing/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Flat
                 Roofing</a>
-              <a href="/services/multi-family-roofing/"
+              <a href="/services/multi-family-roofing/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Multi-Family
                 Roofing</a>
-              <a href="/services/metal-roofing/"
+              <a href="/services/metal-roofing/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Metal
                 Roofing</a>
-              <a href="/services/emergency-roofing/"
+              <a href="/services/emergency-roofing/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Emergency
                 Roofing</a>
-              <a href="/services/roof-tarping/"
+              <a href="/services/roof-tarping/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Roof
                 Tarping</a>
-              <a href="/services/roof-inspection/"
+              <a href="/services/roof-inspection/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Roof
                 Inspection</a>
-              <a href="/services/gutters-siding/"
+              <a href="/services/gutters-siding/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Gutters
                 & Siding</a>
-              <a href="/services/insurance-claims/"
+              <a href="/services/insurance-claims/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Insurance
                 Claims</a>
-              <a href="/services/"
+              <a href="/services/" role="menuitem"
                 class="block px-4 py-3 text-xs font-bold uppercase text-blue-600 bg-slate-50 hover:bg-slate-100 text-center sticky bottom-0">View
                 All Services</a>
-            </div>
-          </div>
-        </div>
+            </li>
+          </ul>
+        </li>
 
         <!-- Areas Served Dropdown -->
-        <div class="relative group">
-          <a href="#"
+        <li class="relative group" role="none">
+          <a href="/areas-served/" role="menuitem" aria-haspopup="true" aria-expanded="false"
             class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500 flex items-center gap-1 py-4">
-            Areas Served <i data-lucide="chevron-down" class="h-4 w-4"></i>
+            Areas Served <i data-lucide="chevron-down" class="h-4 w-4" aria-hidden="true"></i>
           </a>
-          <div
-            class="absolute left-0 top-full pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
-            <div
+          <ul role="menu" aria-label="Areas Served Menu"
+            class="absolute left-0 top-full pt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 list-none m-0 p-0">
+            <li role="none"
               class="bg-white shadow-xl rounded-lg border border-slate-100 overflow-hidden flex flex-col max-h-96 overflow-y-auto">
-              <a href="/areas-served/houston/"
+              <a href="/areas-served/houston/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Houston</a>
-              <a href="/areas-served/pasadena/"
+              <a href="/areas-served/pasadena/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Pasadena</a>
-              <a href="/areas-served/baytown/"
+              <a href="/areas-served/baytown/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Baytown</a>
-              <a href="/areas-served/deer-park/"
+              <a href="/areas-served/deer-park/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Deer
                 Park</a>
-              <a href="/areas-served/la-porte/"
+              <a href="/areas-served/la-porte/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">La
                 Porte</a>
-              <a href="/areas-served/league-city/"
+              <a href="/areas-served/league-city/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">League
                 City</a>
-              <a href="/areas-served/pearland/"
+              <a href="/areas-served/pearland/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Pearland</a>
-              <a href="/areas-served/friendswood/"
+              <a href="/areas-served/friendswood/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Friendswood</a>
-              <a href="/areas-served/clear-lake/"
+              <a href="/areas-served/clear-lake/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Clear
                 Lake</a>
-              <a href="/areas-served/seabrook/"
+              <a href="/areas-served/seabrook/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Seabrook</a>
-              <a href="/areas-served/kemah/"
+              <a href="/areas-served/kemah/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Kemah</a>
-              <a href="/areas-served/texas-city/"
+              <a href="/areas-served/texas-city/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Texas
                 City</a>
-              <a href="/areas-served/galveston/"
+              <a href="/areas-served/galveston/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Galveston</a>
-              <a href="/areas-served/alvin/"
+              <a href="/areas-served/alvin/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Alvin</a>
-              <a href="/areas-served/missouri-city/"
+              <a href="/areas-served/missouri-city/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Missouri
                 City</a>
-              <a href="/areas-served/sugar-land/"
+              <a href="/areas-served/sugar-land/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Sugar
                 Land</a>
-              <a href="/areas-served/katy/"
+              <a href="/areas-served/katy/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Katy</a>
-              <a href="/areas-served/cypress/"
+              <a href="/areas-served/cypress/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Cypress</a>
-              <a href="/areas-served/spring/"
+              <a href="/areas-served/spring/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Spring</a>
-              <a href="/areas-served/the-woodlands/"
+              <a href="/areas-served/the-woodlands/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">The
                 Woodlands</a>
-              <a href="/areas-served/conroe/"
+              <a href="/areas-served/conroe/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Conroe</a>
-              <a href="/areas-served/webster/"
+              <a href="/areas-served/webster/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Webster</a>
-            </div>
-          </div>
-        </div>
+            </li>
+          </ul>
+        </li>
 
-        <a href="/general-construction/"
-          class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">General
-          Construction</a>
-        <a href="/faq/"
-          class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">FAQ</a>
-<a href="/project-gallery/"
-          class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">Gallery</a>
-        <a href="/contact-us/"
-          class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">Contact</a>
-      </div>
+        <li role="none">
+          <a href="/general-construction/" role="menuitem"
+            class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">General
+            Construction</a>
+        </li>
+        <li role="none">
+          <a href="/faq/" role="menuitem"
+            class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">FAQ</a>
+        </li>
+        <li role="none">
+          <a href="/project-gallery/" role="menuitem"
+            class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">Gallery</a>
+        </li>
+        <li role="none">
+          <a href="/contact-us/" role="menuitem"
+            class="nav-link text-sm font-bold uppercase tracking-wide text-slate-600 hover:text-blue-500">Contact</a>
+        </li>
+      </ul>
       <div class="hidden lg:block">
         <a href="/contact-us/"
           class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-bold uppercase text-xs tracking-wider shadow-md hover:shadow-lg transition-all transform hover:scale-105">Get
