@@ -39,9 +39,6 @@ semantic_nav = '''      <ul class="hidden lg:flex space-x-4 xl:space-x-6 items-c
               <a href="/services/multi-family-roofing/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Multi-Family
                 Roofing</a>
-              <a href="/services/metal-roofing/" role="menuitem"
-                class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Metal
-                Roofing</a>
               <a href="/services/emergency-roofing/" role="menuitem"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Emergency
                 Roofing</a>

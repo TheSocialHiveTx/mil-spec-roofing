@@ -34,9 +34,6 @@ services_dropdown = '''
               <a href="/services/multi-family-roofing/"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Multi-Family
                 Roofing</a>
-              <a href="/services/metal-roofing/"
-                class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Metal
-                Roofing</a>
               <a href="/services/emergency-roofing/"
                 class="block px-4 py-3 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 border-b border-slate-50 transition-colors">Emergency
                 Roofing</a>
