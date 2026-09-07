@@ -1,4 +1,4 @@
-<script type="application/ld+json">
+﻿<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -166,7 +166,14 @@
 <body class="bg-slate-50 font-sans text-slate-900">
 
         <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm py-4">
+      <!-- Mobile Tap-to-Call Bar -->
+  <div class="lg:hidden fixed top-0 left-0 w-full h-10 z-[60] bg-blue-600 text-white font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center shadow-md">
+    <a href="tel:+12818135925" class="flex items-center justify-center gap-2 w-full h-full py-2">
+      <i data-lucide="phone" class="h-4 w-4"></i>
+      <span>Call Now: 281-813-5925</span>
+    </a>
+  </div>
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm py-4 top-10 lg:top-0">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="/" class="flex items-center cursor-pointer group">
                 <div class="flex flex-col items-center">
@@ -565,11 +572,10 @@
         <section class="py-16 bg-blue-600 text-white text-center">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold mb-4">Still Have Questions?</h2>
-                <p class="text-blue-100 mb-8 max-w-2xl mx-auto">Our team is standing by to provide a detailed briefing
-                    on your specific situation.</p>
+                <p class="text-blue-100 mb-8 max-w-2xl mx-auto">Our team is standing by to provide a free evaluation of your specific situation.</p>
                 <a href="/contact-us/"
                     class="bg-white text-blue-600 hover:bg-slate-100 px-8 py-4 rounded-sm font-bold uppercase tracking-wider transition-colors inline-block">
-                    Contact HQ
+                    Contact Us
                 </a>
             </div>
         </section>
@@ -661,7 +667,7 @@
                     <h4 class="text-white font-bold uppercase tracking-wider mb-6">Contact</h4>
                     <ul class="space-y-3 text-sm">
                         <li class="flex items-center"><i data-lucide="phone" class="h-4 w-4 mr-2 text-blue-500"></i>
-                            281-813-5925
+                            <a href="tel:+12818135925" class="hover:text-white transition-colors">281-813-5925</a>
                         </li>
                         <li class="flex items-center"><i data-lucide="mail" class="h-4 w-4 mr-2 text-blue-500"></i>
                             info@mil-specroofing.com</li>
@@ -673,7 +679,7 @@
             </div>
 
             <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-                <p>&copy; 2024 Mil-Spec Roofing & Construction. All rights reserved.</p>
+                <p>&copy; 2026 Mil-Spec Roofing & Construction. All rights reserved.</p>
                 <p class="mt-2 md:mt-0">Built to protect what matters most.</p>
             </div>
         </div>

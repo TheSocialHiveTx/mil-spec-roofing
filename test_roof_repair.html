@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <script type="application/ld+json">
@@ -427,7 +427,14 @@
 <body class="bg-slate-50 font-sans text-slate-900">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm py-4">
+      <!-- Mobile Tap-to-Call Bar -->
+  <div class="lg:hidden fixed top-0 left-0 w-full h-10 z-[60] bg-blue-600 text-white font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center shadow-md">
+    <a href="tel:+12818135925" class="flex items-center justify-center gap-2 w-full h-full py-2">
+      <i data-lucide="phone" class="h-4 w-4"></i>
+      <span>Call Now: 281-813-5925</span>
+    </a>
+  </div>
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm py-4 top-10 lg:top-0">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="/" class="flex items-center cursor-pointer group">
                 <div class="flex flex-col items-center">
@@ -686,7 +693,7 @@
             </div>
 
             <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
-                <p>&copy; 2024 Mil-Spec Roofing & Construction. All rights reserved.</p>
+                <p>&copy; 2026 Mil-Spec Roofing & Construction. All rights reserved.</p>
                 <p class="mt-2 md:mt-0">Built to protect what matters most.</p>
             </div>
         </div>

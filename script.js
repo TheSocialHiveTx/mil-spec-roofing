@@ -177,3 +177,54 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(aboutSection);
     }
 });
+
+
+// =====================================================
+// GA4 Key Event Tracking
+// =====================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  // --- Phone number click tracking ---
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'phone_call_click', {
+          event_category: 'engagement',
+          event_label: link.href,
+          value: 1
+        });
+      }
+    });
+  });
+
+  // --- Contact form submission tracking ---
+  document.querySelectorAll('form').forEach(function(form) {
+    form.addEventListener('submit', function() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submission', {
+          event_category: 'conversion',
+          event_label: form.action || window.location.pathname,
+          value: 1
+        });
+      }
+    });
+  });
+
+  // --- CTA button click tracking (Get Free Estimate, Get Free Quote, Request Free Inspection) ---
+  document.querySelectorAll('a[href="/contact-us/"], button[type="submit"]').forEach(function(el) {
+    var text = (el.textContent || el.innerText || '').trim().toLowerCase();
+    if (text.indexOf('estimate') > -1 || text.indexOf('quote') > -1 || text.indexOf('inspection') > -1 || text.indexOf('started') > -1) {
+      el.addEventListener('click', function() {
+        if (typeof gtag === 'function') {
+          gtag('event', 'cta_click', {
+            event_category: 'conversion',
+            event_label: text,
+            value: 1
+          });
+        }
+      });
+    }
+  });
+
+});
